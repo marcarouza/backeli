@@ -1,0 +1,27 @@
+<div class="container mt-5">
+	<div class="row justify-content-center">
+		<div class="col-md-6 formulaire">
+			<h5 class="text-center mb-4" id="title">Connnexion en tant que membre</h5>
+			<form id="loginForm" action="/logUser" method="post">
+				<div class="form-floating mb-3">
+					<input type="text" class="form-control" id="email" name="email" placeholder="Votre email" required />
+					<label for="email">Email</label>
+				</div>
+				<div class="form-floating mb-3">
+					<input type="password" class="form-control" id="pwd" name="pwd" placeholder="Mot de passe" required />
+					<label for="pwd">Mot de passe</label>
+				</div>
+				<div class="d-grid">
+					<button id="testLog" type="submit" class="btn btn-primary btn-lg">
+						Connexion
+					</button>
+				</div>
+			</form>
+
+			<p class="text-center mt-5 note">
+				Pas encore de compte ?
+				<span> <a href="signPage">Cliquez-ici</a></span>
+			</p>
+		</div>
+	</div>
+</div>

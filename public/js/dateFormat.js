@@ -1,0 +1,60 @@
+document.addEventListener('DOMContentLoaded', function () {
+	flatpickr('#date', {
+		dateFormat: 'd-m-Y', // Format de date européen (jour-mois-année)
+		altInput: true,
+		altFormat: 'd F Y', // Format d'affichage alternatif (jour Mois année)
+		locale: {
+			firstDayOfWeek: 1, // Lundi comme premier jour de la semaine
+			weekdays: {
+				shorthand: [
+					'Dim',
+					'Lun',
+					'Mar',
+					'Mer',
+					'Jeu',
+					'Ven',
+					'Sam',
+				],
+				longhand: [
+					'Dimanche',
+					'Lundi',
+					'Mardi',
+					'Mercredi',
+					'Jeudi',
+					'Vendredi',
+					'Samedi',
+				],
+			},
+			months: {
+				shorthand: [
+					'Jan',
+					'Fév',
+					'Mar',
+					'Avr',
+					'Mai',
+					'Juin',
+					'Juil',
+					'Août',
+					'Sep',
+					'Oct',
+					'Nov',
+					'Déc',
+				],
+				longhand: [
+					'Janvier',
+					'Février',
+					'Mars',
+					'Avril',
+					'Mai',
+					'Juin',
+					'Juillet',
+					'Août',
+					'Septembre',
+					'Octobre',
+					'Novembre',
+					'Décembre',
+				],
+			},
+		},
+	});
+});

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Chat Drawer Example</title>
+   <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+      rel="stylesheet">
+
+
+
+
+
+   <style>
+      .chat-tab {
+         position: fixed;
+         bottom: 0;
+         right: 0;
+         width: 100%;
+         max-width: 300px;
+         background-color: #007bff;
+         color: white;
+         text-align: center;
+         padding: 10px;
+         cursor: pointer;
+      }
+
+      .chat-drawer {
+         position: fixed;
+         bottom: 0;
+         right: 0;
+         width: 100%;
+         max-width: 300px;
+         height: 400px;
+         background-color: #f8f9fa;
+         border: 1px solid #ddd;
+         display: flex;
+         flex-direction: column;
+         transform: translateY(100%);
+         transition: transform 0.3s ease-in-out;
+      }
+
+      .chat-drawer.open {
+         transform: translateY(0);
+      }
+
+      .chat-header {
+         background-color: #007bff;
+         color: white;
+         padding: 10px;
+         text-align: center;
+         border-radius: 1rem 0px 0px 0;
+      }
+
+      .chat-body {
+         flex-grow: 1;
+         padding: 10px;
+         overflow-y: auto;
+      }
+
+      .chat-footer {
+         display: flex;
+         flex-direction: column;
+         padding: 10px;
+         border-top: 1px solid #ddd;
+
+         i {
+            color: #007bff;
+            font-size: large;
+         }
+      }
+
+      .chat-footer textarea {
+         resize: none;
+         height: 60px;
+         width: 100%;
+      }
+
+      .chat-footer button {
+         margin: 0;
+         padding: 0;
+         width: 100%;
+
+
+         background-color: #007bff;
+         color: aliceblue;
+         height: 30px;
+         border-radius: 0px 0px 0.5rem 0.5rem;
+
+         i {
+            color: aliceblue;
+
+            transform: rotate3d(1, 1, 1, 180deg);
+
+            transition: transform 0.3s ease-in-out;
+
+         }
+
+
+
+         i:hover {
+            color: aliceblue;
+            transform: rotate3d(1, 1, 1, 180deg);
+            ;
+
+         }
+
+         /* border: none; */
+      }
+   </style>
+</head>
+
+<body>
+
+   <div class="container">
+      <h1 class="mt-5">Chat Drawer Example</h1>
+      <p class="lead">Click the chat tab at the bottom to open the chat drawer.</p>
+   </div>
+
+   <div class="chat-tab" onclick="toggleChatDrawer()">
+      Open Chat
+   </div>
+
+   <div class="chat-drawer" id="chatDrawer">
+      <div class="chat-header">
+         Chat
+      </div>
+      <div class="chat-body">
+         <div class="chat-message">
+            <strong>User:</strong> Hello!
+         </div>
+         <div class="chat-message">
+            <strong>You:</strong> Hi there!
+         </div>
+         <!-- Add more chat messages here -->
+      </div>
+      <div class="chat-footer">
+         <textarea class="form-control" placeholder="Votre message..."></textarea>
+         <button class="btn btn-primary">
+            <i class="bi bi-send "></i>
+         </button>
+      </div>
+   </div>
+
+   <script>
+      function toggleChatDrawer() {
+         var chatDrawer = document.getElementById('chatDrawer');
+         chatDrawer.classList.toggle('open');
+      }
+   </script>
+
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+20240320	18:55:57	e23cb954-deb2-4da1-89a3-cbe9e785a37b	ReferenceError : users is not defined
+20240320	19:00:07	762e1a2a-d60f-4c46-97b7-ddc633bb45b6	ReferenceError : users is not defined
+20240320	19:20:00	b261414e-ec7f-4e80-87f2-55e917138a36	RangeError : Invalid status code: { message: 'Ce joueur existe deja.' }
+20240320	19:20:33	419f5e6e-1591-4b0d-9ec1-316b2459d88c	RangeError : Invalid status code: { message: 'Ce joueur existe deja.' }
+20240320	19:28:56	1015441a-0cf5-432b-badf-628978b00ba8	ReferenceError : employee is not defined
+20240321	22:27:55	2a894ec9-cb5f-458d-97e4-d041a79d0089	SyntaxError : Expected double-quoted property name in JSON at position 21

@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<div class="container">
+		<a class="navbar-brand" href="/">
+			<img class="d-inline-block align-text-top elilogo" src="favicon/eliLogo192x192.png" alt="Eli Azoura">
+		</a>
+		<!-- Bouton de basculement pour petits écrans -->
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ms-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="cv">cv</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="projets">projets</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="contact">contact</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="blog">blog</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle btn text-white border border-white border-opacity-25" href="#"
+						id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<i title="mon compte" class="bi bi-person"></i>
+					</a>
+					<ul id="dynamicWidth" class="dropdown-menu user_menu" aria-labelledby="navbarDropdown">
+						<% if (user) { %>
+							<li class="dropdown-item user_menu_item">
+								<span style="color: cornflowerblue;">
+									<%= user.email %>
+								</span>
+							</li>
+							<li><a class="dropdown-item user_menu_item" href="modifyUserPage">mon compte</a></li>
+							<li><a class="dropdown-item user_menu_item" href="/logOut">déconnexion</a></li>
+							<% } else { %>
+								<li><a class="dropdown-item user_menu_item" href="logUserPage">connexion</a></li>
+								<li><a class="dropdown-item user_menu_item" href="signPage">créer un compte</a></li>
+								<% } %>
+					</ul>
+				</li>
+			</ul>
+			<ul class="list-unstyled mb-0 ms-3">
+				<% if (user) { %>
+					<li class="txt-white user">
+						<span class="user" style="color: rgb(0, 255, 55);"><i class="bi bi-check-circle"></i>&nbsp;</span>
+						<%= user.email %>
+					</li>
+					<% } else { %>
+						<li>
+							<span class="px-4" style="color: orange;">non connecté&nbsp;</span>
+						</li>
+						<% } %>
+			</ul>
+		</div>
+	</div>
+</nav>

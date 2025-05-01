@@ -1,0 +1,9 @@
+.navbar-custom {
+	height: 50px; /* Ajustez la hauteur selon vos besoins */
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+	line-height: 50px; /* Ajustez pour centrer le contenu verticalement */
+}

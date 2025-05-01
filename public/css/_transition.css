@@ -1,0 +1,42 @@
+#back-to-top {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+
+	z-index: 99;
+	cursor: pointer;
+	border-radius: 37px 0 0 0;
+	-webkit-transition: opacity 0.2s ease-out;
+	-o-transition: opacity 0.2s ease-out;
+	transition: opacity 0.2s ease-out;
+	opacity: 0;
+	background-color: ##00000045;
+	border: 0.5 black solid;
+}
+
+/* transition.css */
+.fade-in {
+	animation: fadeIn 0.1s ease-in-out both;
+}
+
+.fade-out {
+	animation: fadeOut 0.1s ease-in-out both;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}

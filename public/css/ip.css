@@ -1,0 +1,26 @@
+body {
+	background-color: #343a40; /* Couleur de fond sombre */
+	color: #fff; /* Couleur du texte */
+}
+
+.navbar {
+	background-color: #343a40; /* Couleur de fond sombre pour la barre de navigation */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: #fff; /* Couleur du texte des liens */
+}
+
+h1 {
+	color: rgb(22, 124, 227);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 5rem;
+	text-align: center;
+}
+
+h2 {
+	color: rgb(227, 114, 22);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8rem;
+	text-align: center;
+}

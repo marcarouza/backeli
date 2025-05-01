@@ -1,0 +1,71 @@
+.txt-black {
+	color: #000;
+}
+
+.txt-white {
+	color: #fff;
+}
+
+.formulaire {
+	background-color: #00000039;
+	padding: 1.6rem;
+	border-radius: 0.5rem;
+}
+
+.form-floating label {
+	color: #000;
+}
+
+/* ------------------------------------ */
+.navbar {
+	background-color: #343a40; /* Couleur de fond sombre pour la barre de navigation */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: #fff; /* Couleur du texte des liens */
+}
+
+html {
+	background-color: #000000;
+}
+main {
+	padding: 1rem;
+	color: antiquewhite;
+}
+
+p {
+	height: auto;
+}
+/* h2 {
+	color: rgb(0, 0, 0);
+} */
+
+/* Style CORBEILLE pour le conteneur du champ avec position relative */
+.form-control {
+	position: relative;
+}
+
+/* Style  CORBEILLE  pour aligner les icônes de corbeille */
+.delete-icon {
+	position: absolute;
+	/* top: 50%; */
+	right: 17%;
+	transform: translateY(-2rem);
+	cursor: pointer;
+	color: orangered;
+}
+
+.alert {
+	color: orangered;
+}
+
+.input-group-text {
+	cursor: pointer;
+}
+
+.note {
+	color: #fff;
+	font-size: 1rem;
+	text-align: center;
+	font-style: italic;
+}

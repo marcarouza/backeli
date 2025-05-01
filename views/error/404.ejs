@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- 
+https://codepen.io/Ahmed_B_Hameed/pen/LZqNmp
+
+ -->
+<html lang="en">
+	<%- include('../partials/head.ejs') %>
+
+	<body>
+		<%- include('../partials/nav.ejs') %>
+
+		<!-- Error Page -->
+		<div class="error">
+			<div class="container-floud">
+				<div class="col-xs-12 ground-color text-center">
+					<div class="container-error-404">
+						<div class="clip">
+							<div class="shadow">
+								<span class="digit thirdDigit"></span>
+							</div>
+						</div>
+						<div class="clip">
+							<div class="shadow">
+								<span class="digit secondDigit"></span>
+							</div>
+						</div>
+						<div class="clip">
+							<div class="shadow">
+								<span class="digit firstDigit"></span>
+							</div>
+						</div>
+						<div class="msg">
+							OH!<span class="triangle"></span>
+						</div>
+					</div>
+					<h2 class="h1">
+						Cette page est introuvable ou n'existe plus sur
+						mon site. La page d'accueil s'affichera dans
+						quelques secondes
+					</h2>
+				</div>
+			</div>
+		</div>
+		<%- include('../partials/footer.ejs') %>
+
+		<!-- Error Page -->
+		<script src="js/404.js"></script>
+		<script>
+			// Rediriger vers la page d'accueil après un délai de 5 secondes (5000 millisecondes)
+			setTimeout(() => {
+				window.location.href = '/';
+			}, 6000);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs') %>
+
+	<body>
+		<%- include('partials/nav') %>
+			<!--  -->
+			<!--  -->
+			<%-include('partials /notifBoot') %>
+
+				<!-- Contenu principal -->
+				<div class="container mt-3">
+					<!--  -->
+					<%- include('partials/logUserForm') %>
+
+						<!--  -->
+						<p class="text-center mt-3 note">
+							Vous avez déjà un compte ?
+							<span> <a href="logUserPage">Cliquez-ici</a></span>
+						</p>
+				</div>
+				<!-- include('chat.ejs')    -->
+				<br />
+
+				<!--  -->
+				<%- include('partials/footer.ejs') %>
+
+	</body>
+
+</html>

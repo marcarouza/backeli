@@ -1,0 +1,95 @@
+.elilogo {
+	width: 30px;
+	height: 30px;
+}
+.deuxcol {
+	display: inline-block;
+	grid-template-columns: 1fr 1fr;
+}
+
+html,
+body {
+	/* height: 110vh; */
+	background-color: white;
+}
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	.small-caps {
+		font-variant: small-caps !important;
+	}
+}
+main {
+	flex: 1;
+	height: 80vh;
+}
+footer {
+	flex-shrink: 0;
+}
+
+.small-caps {
+	font-variant: small-caps !important;
+	font-size: 0.8rem !important;
+}
+
+.user {
+	font-size: 0.8rem;
+}
+
+@media (min-width: 300px) and (max-width: 992px) {
+	.user {
+		font-size: 0.6rem;
+	}
+
+	.dropdown-item {
+		/* background-color: #fff !important; */
+		text-align: end !important;
+	}
+
+	.user_menu_item {
+		text-align: end !important;
+	}
+
+	.nav-link {
+		/* width: min-content;
+		text-align: end !important; */
+
+		btn {
+			width: 60px;
+		}
+	}
+}
+
+.fw-bolder {
+	color: black;
+}
+
+.user_menu {
+	width: auto !important;
+	background-color: rgb(33, 37, 41) !important;
+}
+
+.user_menu_item {
+	font-size: 0.8rem;
+	color: #fff !important;
+}
+.dropdown-menu {
+	border-radius: 0 0 1rem 1rem !important;
+}
+
+.dropdown-item:hover {
+	/* background-color: #fff !important; */
+	color: black !important;
+}
+
+.navbar-nav .nav-item .nav-link {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	text-align: end;
+}

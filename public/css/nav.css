@@ -1,0 +1,15 @@
+.profil {
+	color: rgb(255, 255, 255) !important;
+	background-color: aliceblue;
+
+	/* font-size: x-large; */
+}
+.btn-primary {
+	background-color: #ff5733; /* Couleur de fond personnalisée */
+	border-color: #ff5733; /* Couleur de la bordure */
+	color: #ffffff; /* Couleur du texte */
+}
+.btn-primary:hover {
+	background-color: #c70039; /* Couleur de fond au survol */
+	border-color: #c70039; /* Couleur de la bordure au survol */
+}

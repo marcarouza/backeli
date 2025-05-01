@@ -1,0 +1,54 @@
+<div class="container mt-5">
+   <h1>Votre compte utilisateur</h1>
+   <h2>informations connues à ce jour</h2>
+   <table class="table table-bordered mt-3">
+      <tbody>
+
+         <!--  -->
+         <!--  -->
+         <!--  -->
+         <% if (user) { %>
+            <tr>
+               <th>Email</th>
+               <td>
+                  <%= user.email %>
+               </td>
+            </tr>
+            <tr>
+               <th>Pseudo</th>
+
+
+               <% if (user.pseudo) { %>
+                  <td>
+                     <%= user.pseudo %>
+                  </td>
+                  <% } else { %>
+                     <td>
+                        non défini
+                     </td>
+                     <% } %>
+
+
+            </tr>
+
+
+            <tr>
+               <th>Date d'inscription</th>
+               <td>
+                  <%= new Date(user.dateInscription).toLocaleDateString('fr-FR') %>
+               </td>
+            </tr>
+
+            <% } else { %>
+
+
+               <h3>Un erreur est surevenue, veuillez vous reconnecter</h3>
+               <% } %>
+                  <!--  -->
+                  <!--  -->
+                  <!--  -->
+
+
+      </tbody>
+   </table>
+</div>

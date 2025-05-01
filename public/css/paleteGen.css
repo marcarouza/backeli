@@ -1,0 +1,180 @@
+--palatinate-blue: #3c3cffff;
+--tropical-indigo: #9c9cffff;
+--neon-blue: #6464fdff;
+--periwinkle: #dbdbffff;
+--zaffre: #1d1dacff;
+
+/* CSS HSL */
+--palatinate-blue: hsla(240, 100%, 62%, 1);
+--tropical-indigo: hsla(240, 100%, 81%, 1);
+--neon-blue: hsla(240, 97%, 69%, 1);
+--periwinkle: hsla(240, 100%, 93%, 1);
+--zaffre: hsla(240, 71%, 39%, 1);
+
+/* SCSS HEX */
+$palatinate-blue: #3c3cffff;
+$tropical-indigo: #9c9cffff;
+$neon-blue: #6464fdff;
+$periwinkle: #dbdbffff;
+$zaffre: #1d1dacff;
+
+/* SCSS HSL */
+$palatinate-blue: hsla(240, 100%, 62%, 1);
+$tropical-indigo: hsla(240, 100%, 81%, 1);
+$neon-blue: hsla(240, 97%, 69%, 1);
+$periwinkle: hsla(240, 100%, 93%, 1);
+$zaffre: hsla(240, 71%, 39%, 1);
+
+/* SCSS RGB */
+$palatinate-blue: rgba(60, 60, 255, 1);
+$tropical-indigo: rgba(156, 156, 255, 1);
+$neon-blue: rgba(100, 100, 253, 1);
+$periwinkle: rgba(219, 219, 255, 1);
+$zaffre: rgba(29, 29, 172, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(
+	0deg,
+	#3c3cffff,
+	#9c9cffff,
+	#6464fdff,
+	#dbdbffff,
+	#1d1dacff
+);
+$gradient-right: linear-gradient(
+	90deg,
+	#3c3cffff,
+	#9c9cffff,
+	#6464fdff,
+	#dbdbffff,
+	#1d1dacff
+);
+$gradient-bottom: linear-gradient(
+	180deg,
+	#3c3cffff,
+	#9c9cffff,
+	#6464fdff,
+	#dbdbffff,
+	#1d1dacff
+);
+$gradient-left: linear-gradient(
+	270deg,
+	#3c3cffff,
+	#9c9cffff,
+	#6464fdff,
+	#dbdbffff,
+	#1d1dacff
+);
+$gradient-top-right: linear-gradient(
+	45deg,
+	#3c3cffff,
+	#9c9cffff,
+	#6464fdff,
+	#dbdbffff,
+	#1d1dacff
+);
+$gradient-bottom-right: linear-gradient(
+	135deg,
+	#3c3cffff,
+	#9c9cffff,
+	#6464fdff,
+	#dbdbffff,
+	#1d1dacff
+);
+$gradient-top-left: linear-gradient(
+	225deg,
+	#3c3cffff,
+	#9c9cffff,
+	#6464fdff,
+	#dbdbffff,
+	#1d1dacff
+);
+$gradient-bottom-left: linear-gradient(
+	315deg,
+	#3c3cffff,
+	#9c9cffff,
+	#6464fdff,
+	#dbdbffff,
+	#1d1dacff
+);
+$gradient-radial: radial-gradient(
+	#3c3cffff,
+	#9c9cffff,
+	#6464fdff,
+	#dbdbffff,
+	#1d1dacff
+);
+
+
+<!-- Coolors Palette Widget -->
+      <script src="https://coolors.co/palette-widget/widget.js"></script>
+      <script data-id="025222247285147126">new CoolorsPaletteWidget("025222247285147126", ["3c3cff","9c9cff","6464fd","dbdbff","1d1dac"]); </script>
+
+
+
+
+
+      /* CSS HEX */
+--white: #ffffffff;
+--periwinkle: #dbdbffff;
+--tropical-indigo: #9c9cffff;
+--neon-blue: #6464fdff;
+--palatinate-blue: #3c3cffff;
+--zaffre: #1d1dacff;
+--black: #000000ff;
+--red-ncs: #c30f36ff;
+
+/* CSS HSL */
+--white: hsla(0, 0%, 100%, 1);
+--periwinkle: hsla(240, 100%, 93%, 1);
+--tropical-indigo: hsla(240, 100%, 81%, 1);
+--neon-blue: hsla(240, 97%, 69%, 1);
+--palatinate-blue: hsla(240, 100%, 62%, 1);
+--zaffre: hsla(240, 71%, 39%, 1);
+--black: hsla(0, 0%, 0%, 1);
+--red-ncs: hsla(347, 86%, 41%, 1);
+
+/* SCSS HEX */
+$white: #ffffffff;
+$periwinkle: #dbdbffff;
+$tropical-indigo: #9c9cffff;
+$neon-blue: #6464fdff;
+$palatinate-blue: #3c3cffff;
+$zaffre: #1d1dacff;
+$black: #000000ff;
+$red-ncs: #c30f36ff;
+
+/* SCSS HSL */
+$white: hsla(0, 0%, 100%, 1);
+$periwinkle: hsla(240, 100%, 93%, 1);
+$tropical-indigo: hsla(240, 100%, 81%, 1);
+$neon-blue: hsla(240, 97%, 69%, 1);
+$palatinate-blue: hsla(240, 100%, 62%, 1);
+$zaffre: hsla(240, 71%, 39%, 1);
+$black: hsla(0, 0%, 0%, 1);
+$red-ncs: hsla(347, 86%, 41%, 1);
+
+/* SCSS RGB */
+$white: rgba(255, 255, 255, 1);
+$periwinkle: rgba(219, 219, 255, 1);
+$tropical-indigo: rgba(156, 156, 255, 1);
+$neon-blue: rgba(100, 100, 253, 1);
+$palatinate-blue: rgba(60, 60, 255, 1);
+$zaffre: rgba(29, 29, 172, 1);
+$black: rgba(0, 0, 0, 1);
+$red-ncs: rgba(195, 15, 54, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #ffffffff, #dbdbffff, #9c9cffff, #6464fdff, #3c3cffff, #1d1dacff, #000000ff, #c30f36ff);
+$gradient-right: linear-gradient(90deg, #ffffffff, #dbdbffff, #9c9cffff, #6464fdff, #3c3cffff, #1d1dacff, #000000ff, #c30f36ff);
+$gradient-bottom: linear-gradient(180deg, #ffffffff, #dbdbffff, #9c9cffff, #6464fdff, #3c3cffff, #1d1dacff, #000000ff, #c30f36ff);
+$gradient-left: linear-gradient(270deg, #ffffffff, #dbdbffff, #9c9cffff, #6464fdff, #3c3cffff, #1d1dacff, #000000ff, #c30f36ff);
+$gradient-top-right: linear-gradient(45deg, #ffffffff, #dbdbffff, #9c9cffff, #6464fdff, #3c3cffff, #1d1dacff, #000000ff, #c30f36ff);
+$gradient-bottom-right: linear-gradient(135deg, #ffffffff, #dbdbffff, #9c9cffff, #6464fdff, #3c3cffff, #1d1dacff, #000000ff, #c30f36ff);
+$gradient-top-left: linear-gradient(225deg, #ffffffff, #dbdbffff, #9c9cffff, #6464fdff, #3c3cffff, #1d1dacff, #000000ff, #c30f36ff);
+$gradient-bottom-left: linear-gradient(315deg, #ffffffff, #dbdbffff, #9c9cffff, #6464fdff, #3c3cffff, #1d1dacff, #000000ff, #c30f36ff);
+$gradient-radial: radial-gradient(#ffffffff, #dbdbffff, #9c9cffff, #6464fdff, #3c3cffff, #1d1dacff, #000000ff, #c30f36ff);
+
+      <!-- Coolors Palette Widget -->
+      <script src="https://coolors.co/palette-widget/widget.js"></script>
+      <script data-id="007720867644564211">new CoolorsPaletteWidget("007720867644564211", ["ffffff","dbdbff","9c9cff","6464fd","3c3cff","1d1dac","000000","c30f36"]); </script>

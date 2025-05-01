@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('../partials/head.ejs') %>
+
+	<body class="d-flex flex-column">
+		<main class="flex-shrink-0">
+			<!-- Navigation-->
+			<%- include('../partials/nav.ejs') %>
+
+			<!-- Header-->
+			<header class="py-5">
+				<!-- FORMULAIRE LOGIN-->
+				<div class="container mt-5">
+					<div class="row justify-content-center">
+						<div class="col-md-6">
+							<div class="card">
+								<div class="card-header">
+									Inscription
+								</div>
+								<div class="card-body">
+									<form
+										action="/register"
+										method="post"
+										id=""
+									>
+										<div class="form-group">
+											<label for="username"
+												>Nom
+												d'utilisateur</label
+											>
+											<input
+												type="text"
+												class="form-control"
+												id="username"
+												name="username"
+												placeholder="Entrez votre nom d'utilisateur"
+											/>
+										</div>
+										<div class="form-group">
+											<label for="email"
+												>Adresse
+												Email</label
+											>
+											<input
+												type="email"
+												class="form-control"
+												id="email"
+												name="email"
+												placeholder="Entrez votre email"
+											/>
+										</div>
+										<div class="form-group">
+											<label for="password"
+												>Mot de passe</label
+											>
+											<input
+												type="password"
+												class="form-control"
+												id="password"
+												name="password"
+												placeholder="Mot de passe"
+											/>
+										</div>
+										<button
+											type="submit"
+											class="btn btn-primary"
+										>
+											S'inscrire
+										</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!-- About Section-->
+			<%- include('../partials/apropos.ejs') %>
+		</main>
+		<!-- Footer-->
+		<%- include('../partials/footer.ejs') %>
+
+		<!-- Bootstrap core JS-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	</body>
+</html>

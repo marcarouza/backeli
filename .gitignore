@@ -1,0 +1,11 @@
+
+node_modules
+.DS_Store
+# Cache npm et yarn
+npm-debug.log*
+
+
+# Pour les certificats : mMais garder le dossier lui-même
+!/ssl/.gitkeep
+
+# En  développement, gardez les certificats locaux dans le projet.En production, les certificats doivent être gérés de manière plus sécurisée, souvent en dehors de l'arborescence du projet.

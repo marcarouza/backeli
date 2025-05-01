@@ -1,0 +1,85 @@
+:root {
+	--ChatBtn: 50px;
+	--ChaTop: var(--ChatBtn) + 20px;
+	--ChatRight: var(--ChatBtn);
+	--BtnWidth: 30px;
+	--ChaHeight: 100px;
+	--ChaBorder: 1px solid #ccc;
+	--ChaBg: #fff;
+	--ChaColor: #002853;
+	--ChaFont: 14px;
+	--ChaFontColor: #002853;
+	--ChaFontColor2: #002853;
+}
+
+#cross {
+	text-align: right;
+	font-size: 2rem;
+	color: red;
+	cursor: pointer;
+}
+
+#chatBtn {
+	background-color: #002853;
+	color: #fff;
+	padding: 10px;
+	text-align: left;
+	cursor: pointer;
+	border-bottom: 2px solid #00a2ff;
+}
+
+#chatTog {
+	position: fixed;
+	bottom: var(--ChatBtn);
+
+	right: 10px;
+	background-color: #ded00d;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+
+	/* display: flex; */
+	/* flex-direction: column; */
+	/* overflow: hidden; */
+	/* transition: max-height 0.3s ease; */
+	z-index: 900;
+	/* max-width: 250px; */
+	width: var(--BtnWidth);
+	height: var(--BtnWidth);
+	/* height: auto; */
+}
+
+#chatBubble {
+	position: fixed;
+	bottom: var(--ChatBtn);
+	right: var(--BtnWidth);
+	background-color: #001d57;
+	border: 1px solid #3e3e3e;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	transition: max-height 0.3s ease;
+	z-index: 999;
+	width: 250px;
+
+	box-shadow: 12px 13px 12px rgba(0, 0, 0, 0.8);
+}
+
+#chatContent {
+	padding: 10px;
+	overflow-y: auto;
+	max-height: 200px;
+}
+
+.closed {
+	max-height: 0;
+	max-width: 0;
+}
+
+.open {
+	display: block;
+	max-height: 300px; /* Réglez la hauteur maximale appropriée */
+}

@@ -1,0 +1,39 @@
+{
+	"name": "eli_back",
+	"version": "1.0.0",
+	"main": "/server.js",
+	"scripts": {
+		"dev": " server.js",
+		"mango": "node mango.js",
+		"start": " server.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@faker-js/faker": "^9.6.0",
+		"@types/nodemailer": "^6.4.15",
+		"@vscode/codicons": "^0.0.36",
+		"dotenv": "^16.4.5",
+		"ejs": "^3.1.9",
+		"favicons": "^7.1.5",
+		"nodemon": "^3.1.0",
+		"serve-favicon": "^2.5.0"
+	},
+	"dependencies": {
+		"bcrypt": "^5.1.1",
+		"body-parser": "^1.20.2",
+		"cookie-parser": "^1.4.6",
+		"cors": "^2.8.5",
+		"express": "^4.19.2",
+		"express-useragent": "^1.0.15",
+		"helmet": "^8.0.0",
+		"jsonwebtoken": "^9.0.2",
+		"mongodb": "^6.8.0",
+		"mongoose": "^8.4.4",
+		"nodemailer": "^6.9.14",
+		"npm": "^11.2.0",
+		"socket.io": "^4.7.5",
+		"validator": "^13.12.0"	},
+	"keywords": [],
+	"description": ""
+}

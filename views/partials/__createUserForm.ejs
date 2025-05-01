@@ -1,0 +1,45 @@
+<div class="container mt-5">
+	<div class="row justify-content-center">
+		<div class="col-md-6 formulaire">
+			<h2 class="text-center mb-4">Créer votre compte</h2>
+			<form action="/createUserPage" method="post" id="loginForm">
+				<div class="form-floating mb-3">
+					<input type="email" class="form-control" id="email" name="email" placeholder="Adresse e-mail" required />
+					<label for="email">Votre e-mail</label>
+				</div>
+				<div class="form-floating mb-3">
+					<div class="input-group">
+						<input type="password" class="form-control" id="pwd" name="pwd"
+							placeholder="Mot de passe (entre 8 et 24 signes)" required minlength="8" maxlength="24" />
+						<button class="btn btn-outline-secondary" type="button" id="togglePWD">
+							<i class="bi bi-eye" id="toggleIcon"></i>
+						</button>
+					</div>
+				</div>
+				<div class="form-floating mb-3">
+					<input minlength="3" maxlength="24" required type="text" class="form-control" id="user" name="user"
+						placeholder="Pseudo (optionnel)" />
+					<label for="user">Pseudo
+					</label>
+				</div>
+
+				<h6 class="m-3" style="white-space: pre-line;">Les informations ci-dessus sont indispensables.</h6>
+
+				<ul>
+					<li>Vous devez être propriétaire de l'adresse e-mail.</li>
+					<li>Si votre pseudo est déjà utilisé, vous devrez en choisir un autre.</li>
+				</ul>
+				</h6>
+				<div class="d-grid">
+					<button type="submit" class="btn btn-primary btn-lg btn-block">
+						Créer un compte
+					</button>
+				</div>
+			</form>
+			<p class="text-center mt-5 note">
+				Vous avez déjà un compte ?<br />
+				<a id="profil" href="logUserPage">Connectez-vous ici</a>.
+			</p>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,58 @@
+<div class="container mt-5">
+	<h1 class="mb-4">Recherche d'articles de blog</h1>
+	<form id="searchForm" action="/search" method="GET">
+		<div class="mb-3">
+			<label for="date" class="form-label">Date</label>
+			<input type="text" class="form-control" id="date" name="date" />
+		</div>
+		<div class="mb-3">
+			<label for="author" class="form-label">Auteur</label>
+			<input
+				type="text"
+				class="form-control"
+				id="author"
+				name="author"
+				placeholder="Nom de l'auteur"
+			/>
+		</div>
+		<div class="mb-3">
+			<label for="title" class="form-label">Titre</label>
+			<input
+				type="text"
+				class="form-control"
+				id="title"
+				name="title"
+				placeholder="Titre de l'article"
+			/>
+		</div>
+		<div class="mb-3">
+			<label for="content" class="form-label">Contenu</label>
+			<input
+				type="text"
+				class="form-control"
+				id="content"
+				name="content"
+				placeholder="Contenu de l'article"
+			/>
+		</div>
+		<button type="submit" class="btn btn-primary">Rechercher</button>
+	</form>
+
+	<% if (typeof results !== 'undefined' && results.length > 0) { %>
+	<h2 class="mt-5">Résultats de recherche</h2>
+	<ul class="list-group">
+		<% results.forEach(article => { %>
+		<li class="list-group-item">
+			<h3><%= article.title %></h3>
+			<p><%= article.content %></p>
+			<small
+				>Auteur: <%= article.author %> | Date: <%= article.date
+				%></small
+			>
+		</li>
+		<% }) %>
+	</ul>
+	<% } else if (typeof results !== 'undefined') { %>
+	<p class="mt-5">Aucun résultat trouvé</p>
+	<% } %>
+</div>

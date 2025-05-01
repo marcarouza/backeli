@@ -1,0 +1,10 @@
+<ul>
+   <% if (user) { %>
+      <li>Welcome ! , <%= user.email %>
+      </li>
+      <li><a href="/logout">Log OUT</a></li>
+      <% } else { %>
+         <li><a href="/logPage">Log IN</a></li>
+         <li><a href="/signPage">Sign UP</a></li>
+         <% } %>
+</ul>

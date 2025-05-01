@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Friends Management</title>
+   <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+   <div class="container mt-5">
+      <h1 class="text-center">Manage Friends</h1>
+
+      <div class="card my-4">
+         <div class="card-header">
+            Add Friend
+         </div>
+         <div class="card-body">
+            <form id="addFriendForm" class="row g-3">
+               <div class="col-md-8">
+                  <input type="text" id="friendId" class="form-control" placeholder="Friend ID" required>
+               </div>
+               <div class="col-md-4">
+                  <button type="submit" class="btn btn-primary w-100">Add Friend</button>
+               </div>
+            </form>
+         </div>
+      </div>
+
+      <div class="card my-4">
+         <div class="card-header">
+            Friend Requests
+         </div>
+         <ul id="friendRequests" class="list-group list-group-flush">
+            <!-- Friend requests will be loaded here -->
+         </ul>
+      </div>
+
+      <div class="card my-4">
+         <div class="card-header">
+            My Friends
+         </div>
+         <ul id="myFriends" class="list-group list-group-flush">
+            <!-- Friends will be loaded here -->
+         </ul>
+      </div>
+   </div>
+
+   <script>
+      const userId = 'currentUserId'; // Replace with actual user ID
+
+      document.getElementById('addFriendForm').addEventListener('submit', function (e) {
+         e.preventDefault();
+         const friendId = document.getElementById('friendId').value;
+         fetch('/friends/add', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ userId, friendId })
+         }).then(response => response.json()).then(data => {
+            alert(data.message);
+            loadFriends();
+         });
+      });
+
+      function loadFriends() {
+         fetch('/friends')
+            .then(response => response.json())
+            .then(data => {
+               const friendRequests = data.filter(f => f.status === 'pending' && f.friendId === userId);
+               const myFriends = data.filter(f => f.status === 'accepted' && (f.userId === userId || f.friendId === userId));
+
+               document.getElementById('friendRequests').innerHTML = friendRequests.map(f => `
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            ${f.userId} wants to be your friend
+                            <div>
+                                <button class="btn btn-success btn-sm me-2" onclick="acceptFriend('${f.userId}')">Accept</button>
+                                <button class="btn btn-danger btn-sm" onclick="rejectFriend('${f.userId}')">Reject</button>
+                            </div>
+                        </li>
+                    `).join('');
+
+               document.getElementById('myFriends').innerHTML = myFriends.map(f => `
+                        <li class="list-group-item">${f.userId === userId ? f.friendId : f.userId}</li>
+                    `).join('');
+            });
+      }
+
+      function acceptFriend(friendId) {
+         fetch('/friends/accept', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ userId, friendId })
+         }).then(response => response.json()).then(data => {
+            alert(data.message);
+            loadFriends();
+         });
+      }
+
+      function rejectFriend(friendId) {
+         fetch('/friends/reject', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ userId, friendId })
+         }).then(response => response.json()).then(data => {
+            alert(data.message);
+            loadFriends();
+         });
+      }
+
+      loadFriends();
+   </script>
+</body>
+
+</html>
