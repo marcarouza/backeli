@@ -164,12 +164,14 @@ console.log('Liste des endpoints :', listEndpoints(app));
 
 
 
-// 🌐 Définition du port
-const port = process.env.PORT || 3000;
+// 🌐 Définition du PORT
+const PORT = process.env.PORT || 3000;
 
 // 🚀 Démarrage du serveur (écoute sur 0.0.0.0 pour Render)
-app.listen(port, '0.0.0.0', () => {
-	console.log(`✅ Serveur démarré sur le port ${port}, Host: ${myHost}`);
+app.listen(PORT, () => {
+	console.log(`✅ Serveur démarré sur le PORT ${PORT}, Host: ${myHost}`);
+	const serverUrl = `http://localhost:${PORT}`;
+	console.log(`✅ Serveur démarré sur : ${serverUrl}`);
 
 		// const db = mongoose.connection;
 		// db.once('open', () => {
