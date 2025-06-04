@@ -2,6 +2,7 @@
 const express = require('express');
 const routesControl = require('../controllers/routesControl');
 
+
 const router = express.Router();
 
 const {requireAuth, checkUser} = require('../middlewares/authMiddle');

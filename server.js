@@ -24,6 +24,20 @@ const app = express();
 let myHost;
 let ipAddressGlobal;
 
+//??// 🔹 Chargement des route
+// 
+// 
+// Import de la fonction getInfo depuis le contrôleur
+const { getInfo } = require("./controllers/ControlAgent");
+
+// Définition de la route /info qui va utiliser la fonction getInfo
+router.get("/info", getInfo);
+
+// 
+// 
+// 
+// s
+
 
 // Configuration de MongoDB
 const uriMEMBRES = process.env.URI_MEMBRES;

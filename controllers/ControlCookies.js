@@ -1,3 +1,10 @@
+//## CHECK  COOKIES
+
+module.exports.checkCookies = (req, res) => {
+	const cookies = req.cookies;
+	res.json(cookies);
+};
+
 //##                API COOKIES                               -
 
 module.exports.apiGetCookie = (req, res) => {
