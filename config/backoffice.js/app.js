@@ -1,44 +1,40 @@
-import express from 'express';
-import compression from 'compression';
-import cors from 'cors';
-import morgan from 'morgan';
-import bodyParser from 'body-parser';
-import cookieParser from 'cookie-parser';
-import useragent from 'express-useragent';
-import listEndpoints from 'express-list-endpoints';
-import {fileURLToPath} from 'url';
-import path from 'path';
-import {logger} from './logger.js';
-import {requestLogger} from '../middleware/logger.js';
+const express = require('express');
+const compression = require('compression');
+const cors = require('cors');
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const useragent = require('express-useragent');
+const listEndpoints = require('express-list-endpoints');
+const path = require('path');
 
-// Get directory name using ES modules
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const {logger} = require('./logger.js');
+const {requestLogger} = require('../../midwares_BO/logger.js');
 
 /**
  * Setup Express application with middleware
  * @param {express.Application} app - Express application
  */
-export const setupApp = (app) => {
-	// Basic middleware
-	app.use(compression()); // Compress responses
-	app.use(cors()); // Enable CORS
-	app.use(useragent.express()); // Parse user agent
-	app.use(cookieParser()); // Parse cookies
+const setupApp = (app) => {
+	// Middleware de base
+	app.use(compression()); // Compresser les réponses
+	app.use(cors()); // Activer CORS
+	app.use(useragent.express()); // Parser le user agent
+	app.use(cookieParser()); // Parser les cookies
 
-	// Body parsers
+	// Middlewares pour parser le corps des requêtes
 	app.use(bodyParser.json({limit: '10mb'}));
 	app.use(bodyParser.urlencoded({extended: true, limit: '10mb'}));
 
-	// Set view engine and views directory
+	// Définir le moteur de vues et le répertoire des vues
 	app.set('view engine', 'ejs');
 	app.set('views', path.join(__dirname, '..', 'views'));
 
-	// Static files directory
+	// Répertoires de fichiers statiques
 	app.use(express.static(path.join(__dirname, '..', 'public')));
 	app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')));
 
-	// Request logging
+	// Journalisation des requêtes via Morgan
 	app.use(
 		morgan('dev', {
 			stream: {write: (message) => logger.info(message.trim())},
@@ -46,7 +42,7 @@ export const setupApp = (app) => {
 	);
 	app.use(requestLogger);
 
-	// Health check endpoint
+	// Endpoint de vérification de l'état de l'application
 	app.get('/health', (req, res) => {
 		res.status(200).json({
 			status: 'ok',
@@ -54,15 +50,7 @@ export const setupApp = (app) => {
 		});
 	});
 
-	// Print API endpoints on startup
-	app.use((req, res, next) => {
-		if (req.path === '/api-docs' && req.method === 'GET') {
-			return res.json(listEndpoints(app));
-		}
-		next();
-	});
-
-	// Add API documentation endpoint
+	// Endpoint de documentation de l'API
 	app.get('/api-docs', (req, res) => {
 		const endpoints = listEndpoints(app);
 		res.json(endpoints);
@@ -70,3 +58,5 @@ export const setupApp = (app) => {
 
 	return app;
 };
+
+module.exports = {setupApp};

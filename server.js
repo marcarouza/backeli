@@ -1,30 +1,9 @@
-// 🔹 Chargement du BACK OFFICE 
-
-import { setupApp } from './config/backoffice.js/app.js';
-import {logger} from './config/backoffice.js/logger.js';
-
-
-// Setup app with middleware
-setupApp(app);
-
-
-// Error handling middleware (must be registered last)
-app.use((err, req, res, next) => {
-	logger.error(`Error: ${err.message}`);
-	logger.error(err.stack);
-	
-	const statusCode = err.statusCode || 500;
-	res.status(statusCode).json({
-	  success: false,
-	  error: err.message || 'Server Error',
-	  ...(process.env.NODE_ENV === 'development' && { stack: err.stack })
-	});
-});
- 
-
-
 // 🔹 Chargement des variables d'environnement (en premier)
 require('dotenv').config();
+// 🔹 Chargement du BACK OFFICE
+
+const {setupApp} = require('./config/backoffice.js/app.js');
+const {logger} = require('./config/backoffice.js/logger.js');
 
 const listEndpoints = require('express-list-endpoints');
 
@@ -46,6 +25,9 @@ const useragent = require('express-useragent');
 
 // 🎯 Initialisation Express
 const app = express();
+
+// Setup app with middleware
+setupApp(app);
 
 const {uriMEMBRES, clusterName} = require('./config/MongoConfig');
 
@@ -150,6 +132,19 @@ console.log('Liste des endpoints :', listEndpoints(app));
 const routes = require('./controllers/routesControl');
 
 app.use('/', routes);
+
+// Error handling middleware (must be registered last)
+app.use((err, req, res, next) => {
+	logger.error(`Error: ${err.message}`);
+	logger.error(err.stack);
+
+	const statusCode = err.statusCode || 500;
+	res.status(statusCode).json({
+		success: false,
+		error: err.message || 'Server Error',
+		...(process.env.NODE_ENV === 'development' && {stack: err.stack}),
+	});
+});
 
 // 🌐 Définition du PORT
 const PORT = process.env.PORT || 3000;
