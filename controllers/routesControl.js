@@ -43,19 +43,19 @@ module.exports = {
 };
 
 
-router.get('/getAgent', Get_Agent);
-router.get('/checkUser', Get_CheckUserStatus);
-router.get('/checkCookies', Get_CheckCookies);
-router.get('/getJwtToken', Get_JwtToken);
-router.get('/getAllMembers', Get_AllMembers);	
+router.get('/api/getAgent', Get_Agent);
+router.get('/api/checkUser', Get_CheckUserStatus);
+router.get('/api/checkCookies', Get_CheckCookies);
+router.get('/api/getJwtToken', Get_JwtToken);
+router.get('/api/getAllMembers', Get_AllMembers);	
 
-router.post('/changePWD', Post_ChangePwd);
-router.post('/signUser', Post_SignUser);
-router.post('/reject1Friend', Post_Reject_1Friend);
-router.post('/mailSignOK', Post_MailSignOK);
-router.post('/mailContact', Post_MailContact);
-router.post('/logIN', Post_LogIN);
-router.post('/logOUT', Post_LogOUT);	
+router.post('/api/changePWD', Post_ChangePwd);
+router.post('/api/signUser', Post_SignUser);
+router.post('/api/reject1Friend', Post_Reject_1Friend);
+router.post('/api/mailSignOK', Post_MailSignOK);
+router.post('/api/mailContact', Post_MailContact);
+router.post('/api/logIN', Post_LogIN);
+router.post('/api/logOUT', Post_LogOUT);	
 // ==============================
 
 // Exportation du routeur pour utilisation dans votre application principale
