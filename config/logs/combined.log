@@ -4,3 +4,65 @@
 2025-06-05 18:17:02 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
 2025-06-05 18:17:02 [INFO]: Response: 304 undefined - 8ms
 2025-06-05 18:17:02 [INFO]: [0mGET / [36m304[0m 9.376 ms - -[0m
+2025-06-05 18:30:24 [INFO]: Server running on port 3000
+2025-06-05 18:30:24 [INFO]: Node.js version: v20.17.0
+2025-06-05 18:33:01 [INFO]: Server running on port 3000
+2025-06-05 18:33:01 [INFO]: Node.js version: v20.17.0
+2025-06-05 18:36:34 [INFO]: Server running on port 3000
+2025-06-05 18:36:34 [INFO]: Node.js version: v20.17.0
+2025-06-05 18:36:36 [INFO]: Request: GET / from ::1
+2025-06-05 18:36:36 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-05 18:36:36 [ERROR]: Error: ENOENT: no such file or directory, stat '/Users/eliazoura/Documents/CODE 2025/SERVEURS/views/index.html'
+2025-06-05 18:36:36 [ERROR]: Error: ENOENT: no such file or directory, stat '/Users/eliazoura/Documents/CODE 2025/SERVEURS/views/index.html'
+2025-06-05 18:36:36 [INFO]: Response: 404 undefined - 4ms
+2025-06-05 18:36:36 [INFO]: [0mGET / [33m404[0m 4.091 ms - 254[0m
+2025-06-05 18:36:36 [INFO]: Request: GET /favicon.ico from ::1
+2025-06-05 18:36:36 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-05 18:36:36 [INFO]: Response: 404 Not Found - 2ms
+2025-06-05 18:36:36 [INFO]: [0mGET /favicon.ico [33m404[0m 2.852 ms - 150[0m
+2025-06-05 18:37:02 [INFO]: Request: GET / from ::1
+2025-06-05 18:37:02 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-05 18:37:02 [ERROR]: Error: ENOENT: no such file or directory, stat '/Users/eliazoura/Documents/CODE 2025/SERVEURS/views/index.html'
+2025-06-05 18:37:02 [ERROR]: Error: ENOENT: no such file or directory, stat '/Users/eliazoura/Documents/CODE 2025/SERVEURS/views/index.html'
+2025-06-05 18:37:02 [INFO]: Response: 404 undefined - 5ms
+2025-06-05 18:37:02 [INFO]: [0mGET / [33m404[0m 4.741 ms - 254[0m
+2025-06-05 18:37:03 [INFO]: Request: GET / from ::1
+2025-06-05 18:37:03 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-05 18:37:03 [ERROR]: Error: ENOENT: no such file or directory, stat '/Users/eliazoura/Documents/CODE 2025/SERVEURS/views/index.html'
+2025-06-05 18:37:03 [ERROR]: Error: ENOENT: no such file or directory, stat '/Users/eliazoura/Documents/CODE 2025/SERVEURS/views/index.html'
+2025-06-05 18:37:03 [INFO]: Response: 404 undefined - 2ms
+2025-06-05 18:37:03 [INFO]: [0mGET / [33m404[0m 2.200 ms - 254[0m
+2025-06-05 18:37:32 [INFO]: Request: GET / from ::1
+2025-06-05 18:37:32 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-05 18:37:32 [ERROR]: Error: ENOENT: no such file or directory, stat '/Users/eliazoura/Documents/CODE 2025/SERVEURS/views/index.html'
+2025-06-05 18:37:32 [ERROR]: Error: ENOENT: no such file or directory, stat '/Users/eliazoura/Documents/CODE 2025/SERVEURS/views/index.html'
+2025-06-05 18:37:32 [INFO]: Response: 404 undefined - 2ms
+2025-06-05 18:37:32 [INFO]: [0mGET / [33m404[0m 3.186 ms - 254[0m
+2025-06-05 18:37:33 [INFO]: Request: GET / from ::1
+2025-06-05 18:37:33 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-05 18:37:33 [ERROR]: Error: ENOENT: no such file or directory, stat '/Users/eliazoura/Documents/CODE 2025/SERVEURS/views/index.html'
+2025-06-05 18:37:33 [ERROR]: Error: ENOENT: no such file or directory, stat '/Users/eliazoura/Documents/CODE 2025/SERVEURS/views/index.html'
+2025-06-05 18:37:33 [INFO]: Response: 404 undefined - 1ms
+2025-06-05 18:37:33 [INFO]: [0mGET / [33m404[0m 1.655 ms - 254[0m
+2025-06-05 18:37:38 [INFO]: Server running on port 3000
+2025-06-05 18:37:38 [INFO]: Node.js version: v20.17.0
+2025-06-05 18:37:42 [INFO]: Request: GET / from ::1
+2025-06-05 18:37:42 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-05 18:37:42 [INFO]: Response: 200 OK - 7ms
+2025-06-05 18:37:42 [INFO]: [0mGET / [32m200[0m 4.194 ms - -[0m
+2025-06-05 18:37:42 [INFO]: Request: GET /api/server-info from ::1
+2025-06-05 18:37:42 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-05 18:37:42 [INFO]: Response: 404 Not Found - 3ms
+2025-06-05 18:37:42 [INFO]: [0mGET /api/server-info [33m404[0m 3.822 ms - 154[0m
+2025-06-05 19:00:32 [INFO]: Request: GET / from ::1
+2025-06-05 19:00:32 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-05 19:00:32 [INFO]: Response: 304 undefined - 5ms
+2025-06-05 19:00:33 [INFO]: [0mGET / [36m304[0m 5.406 ms - -[0m
+2025-06-05 19:00:33 [INFO]: Request: GET /api/server-info from ::1
+2025-06-05 19:00:33 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-05 19:00:33 [INFO]: Response: 404 Not Found - 1ms
+2025-06-05 19:00:33 [INFO]: [0mGET /api/server-info [33m404[0m 1.683 ms - 154[0m
+2025-06-05 19:00:33 [INFO]: Request: GET /favicon.ico from ::1
+2025-06-05 19:00:33 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-05 19:00:33 [INFO]: Response: 404 Not Found - 1ms
+2025-06-05 19:00:33 [INFO]: [0mGET /favicon.ico [33m404[0m 0.888 ms - 150[0m
