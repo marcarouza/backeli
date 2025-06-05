@@ -1,3 +1,28 @@
+// 🔹 Chargement du BACK OFFICE 
+
+import { setupApp } from './config/backoffice.js/app.js';
+import {logger} from './config/backoffice.js/logger.js';
+
+
+// Setup app with middleware
+setupApp(app);
+
+
+// Error handling middleware (must be registered last)
+app.use((err, req, res, next) => {
+	logger.error(`Error: ${err.message}`);
+	logger.error(err.stack);
+	
+	const statusCode = err.statusCode || 500;
+	res.status(statusCode).json({
+	  success: false,
+	  error: err.message || 'Server Error',
+	  ...(process.env.NODE_ENV === 'development' && { stack: err.stack })
+	});
+});
+ 
+
+
 // 🔹 Chargement des variables d'environnement (en premier)
 require('dotenv').config();
 
@@ -26,7 +51,6 @@ const {uriMEMBRES, clusterName} = require('./config/MongoConfig');
 
 // 🔹 Importation des CONTROLERS
 
-
 const {
 	// GET routes
 	Get_Agent,
@@ -44,14 +68,10 @@ const {
 	Post_LogOUT,
 	Post_Reject_1Friend,
 } = require('./controllers/routesControl');
- 
-
-
 
 //??// 🔹 Chargement des route
 
 router.use(express.json());
-
 
 mongoose.set('debug', true);
 
@@ -86,8 +106,6 @@ const corsOptions = {
 	optionsSuccessStatus: 200,
 };
 
-
-
 // 🔹 Middleware CORS (placé avant le traitement des requêtes)
 app.use(cors(corsOptions));
 
@@ -100,7 +118,6 @@ app.use(cookieParser());
 
 // 🔹 Détection du User-Agent
 app.use(useragent.express());
-
 
 // 🌐 Connexion à MongoDB
 const dbURI =
@@ -129,15 +146,10 @@ app.use((err, req, res, next) => {
 
 console.log('Liste des endpoints :', listEndpoints(app));
 
-
-
 // 🔹 Routes GET
 const routes = require('./controllers/routesControl');
 
-
 app.use('/', routes);
-
-
 
 // 🌐 Définition du PORT
 const PORT = process.env.PORT || 3000;
@@ -148,26 +160,29 @@ app.listen(PORT, () => {
 	const serverUrl = `http://localhost:${PORT}`;
 	console.log(`✅ Serveur démarré sur : ${serverUrl}`);
 
-		// const db = mongoose.connection;
-		// db.once('open', () => {
-		// 	console.log(`Connexion à ${clusterName} réussie!`);
-		// 	countDoc('lambdas')
-		// 		.then((count) =>
-		// 			console.log('Documents dans la collection:', count)
-		// 		)
-		// 		.catch((error) =>
-		// 			console.error(
-		// 				'Erreur lors du comptage des documents:',
-		// 				error
-		// 			)
-		// 		);
-		// });
+	logger.info(`Server running on port ${PORT}`);
+	logger.info(`Node.js version: ${process.version}`);
 
-		// db.on(
-		// 	'error',
-		// 	console.error.bind(
-		// 		console,
-		// 		'Erreur de connexion à la base de données:'
-		// 	)
-		// );
+	// const db = mongoose.connection;
+	// db.once('open', () => {
+	// 	console.log(`Connexion à ${clusterName} réussie!`);
+	// 	countDoc('lambdas')
+	// 		.then((count) =>
+	// 			console.log('Documents dans la collection:', count)
+	// 		)
+	// 		.catch((error) =>
+	// 			console.error(
+	// 				'Erreur lors du comptage des documents:',
+	// 				error
+	// 			)
+	// 		);
+	// });
+
+	// db.on(
+	// 	'error',
+	// 	console.error.bind(
+	// 		console,
+	// 		'Erreur de connexion à la base de données:'
+	// 	)
+	// );
 });
