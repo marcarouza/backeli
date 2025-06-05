@@ -24,7 +24,7 @@
  * @param {object} res - La réponse Express utilisée pour envoyer le JSON.
  * @returns {Promise<void>}
  */
-module.exports.getInfo = async (req, res) => {
+module.exports.Get_Agent = async (req, res) => {
 	try {
 	  // Vérifier si les informations de l'user-agent sont présentes dans la requête.
 	  if (!req.useragent) {

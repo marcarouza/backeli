@@ -1,7 +1,7 @@
 
 
 //?? REJECT  FRIEND
-module.exports.rejectFriendReq_post = async (req, res) => {
+module.exports.Post_Reject_1Friend = async (req, res) => {
 	try {
 		const {fromID, toID} = req.body;
 		console.log('✅ DEMANDE DE fromID : ', fromID, 'VERS : ', toID);

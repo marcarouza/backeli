@@ -2,7 +2,7 @@
 
 //?? ---- ROUTE API BLOG ----------------------------
 
-module.exports.allPosts_get = async (req, res) => {
+module.exports.Get_AllPosts = async (req, res) => {
 	console.log('🚨 FROM  allPosts_get =+> req :', req);
 	console.log(`TEST ACCES ROUTE API POST allPosts_get`);
 	try {
@@ -27,7 +27,7 @@ module.exports.allPosts_get = async (req, res) => {
 	}
 };
 
-module.exports.OnePostById_get = async (req, res) => {
+module.exports.Get_OnePostById = async (req, res) => {
 	console.log(`TEST ACCES ROUTE API POST getPostById`);
 	try {
 		const postId = req.params.id; // Récupère l'ID du post depuis les paramètres de l'URL
@@ -55,7 +55,7 @@ module.exports.OnePostById_get = async (req, res) => {
 	}
 };
 
-module.exports.addOnePost_post = async (req, res) => {
+module.exports.Post_AddOnePost = async (req, res) => {
 	try {
 		// Récupérer les données du corps de la requête
 		const {title, content, categories, tags, author} = req.body;
@@ -89,16 +89,4 @@ module.exports.addOnePost_post = async (req, res) => {
 			error: err.message,
 		});
 	}
-};
-
-module.exports.blog_get = (req, res) => {
-	res.render('pages/blogPages/blog');
-};
-
-module.exports.postWrite_get = (req, res) => {
-	res.render('pages/blogPages/postWrite');
-};
-
-module.exports.postSearch_get = (req, res) => {
-	res.render('pages/blogPages/postSearch');
 };

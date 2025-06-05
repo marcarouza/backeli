@@ -2,7 +2,7 @@ const {lambdaModel} = require('../models/allSchemas');
 
 //##                LOG OUT                               -
 
-module.exports.logOut_post = async (req, res) => {
+module.exports.Post_LogOUT= async (req, res) => {
 	try {
 		const {fromID} = req.body;
 		console.log('🚨 FromID dans logOutApi : ', fromID);
@@ -53,16 +53,15 @@ module.exports.logOut_post = async (req, res) => {
 
 //##                CONNEXION REELLE                                   -
 
-module.exports.logUserPage_post = async (req, res) => {
+module.exports.Post_LogIN = async (req, res) => {
 	const {email, pwd} = req.body;
 
 	try {
 		// Appel de la méthode login du modèle
 		const user = await lambdaModel.login(email, pwd);
-		console.log(
-			'✅ ✅ ✅~ USER ID FROM LOGIN USER LOGIN USER  POST:',
-			user._id
-		);
+
+		console.log('🚀 ~ PostLog_IN&Out.js : 63 ~ module.exports.logUserPage_post= ~ user  ==> ', user)
+
 		const token = createToken(user._id);
 		res.cookie('jwt', token, {
 			httpOnly: false, // Changé à true pour plus de sécurité

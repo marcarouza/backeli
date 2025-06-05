@@ -4,7 +4,7 @@ const {lambdaModel} = require('../models/allSchemas');
 
 //?? CHANGE PASSWORD
 
-module.exports.changePWD_post = async (req, res) => {
+module.exports.Post_ChangePwd = async (req, res) => {
 	const {fromID, currentPWD, newPWD} = req.body; // ID de la personne qui a envoyé la demande
 	console.log('🚀 ~ module.exports.modifyPWD_post= ~ req.body:', req.body);
 

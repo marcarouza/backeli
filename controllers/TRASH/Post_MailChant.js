@@ -1,4 +1,4 @@
-const {transporterEli} = require('../config/NodeMailerConfig');
+const {transporterEli} = require('../../config/NodeMailerConfig');
 
 //##                ENVOIS DE MAIL pour FORMULAIRE CONTACT CELINE          -
 

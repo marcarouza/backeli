@@ -2,7 +2,7 @@ const {lambdaModel} = require('../models/allSchemas');
 
 //##                AFFICHER TOUS LES MEMBRES                      -
 
-module.exports.allMembers_get = async (req, res) => {
+module.exports.Get_AllMembers = async (req, res) => {
 	try {
 		const allMembers = await lambdaModel.find();
 		if (allMembers.length > 0) {

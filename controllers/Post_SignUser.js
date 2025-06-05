@@ -11,7 +11,7 @@ const createToken = (id) => {
 	return jwt.sign({id}, process.env.JET, {expiresIn: maxAge});
 };
 
-module.exports.signUser_post = async (req, res) => {
+module.exports.Post_SignUser = async (req, res) => {
 	const {pseudo, email, pwd, role} = req.body;
 
 	const newUser = new lambdaModel({

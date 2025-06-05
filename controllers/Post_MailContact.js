@@ -1,6 +1,6 @@
 //##                ENVOIS DE MAIL pour FORMULAIRE CONTACT      ELI          -
 
-module.exports.contactForm_post = async (req, res) => {
+module.exports.Post_MailContact = async (req, res) => {
 	const {firstname, lastname, email, code, mobile, subject, message} =
 		req.body;
 

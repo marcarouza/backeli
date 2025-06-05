@@ -2,7 +2,7 @@ const {transporterEli} = require('../config/NodeMailerConfig');
 
 //##                       ENVOI MAIL  FORMULAIRE INSCRIPTION                            -
 
-module.exports.signConfirm_post = async (req, res) => {
+module.exports.Post_MailSignOK = async (req, res) => {
 	const {email, pwd, pseudo} = req.body;
 
 	console.log('🚨 ~ routesControl ~ signUserMailConfirm_post:', req.body);

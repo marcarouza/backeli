@@ -1,78 +1,105 @@
-
 const express = require('express');
 const router = express.Router();
 
-const {createDB, countDoc, findExistUser} = require('../actionDB');
+// const {createDB, countDoc, findExistUser} = require('../actionDB');
+
+// ==============================
+// Contrôleurs GET
+// ==============================
+const {Get_Agent} = require('./Get_Agent');
+const {Get_CheckUserStatus} = require('./Get_CheckUserStatus');
+const {Get_CheckCookies, Get_JwtToken} = require('./Get_Cookies');
+const {Get_AllMembers} = require('./Get_AllMembers');
+
+// ==============================
+// Contrôleurs POST
+// ==============================
+const {Post_ChangePwd} = require('./Post_ChangePwd');
+const {Post_SignUser} = require('./Post_SignUser');
+const {Post_Reject_1Friend} = require('./Post_Reject_1Friend');
+const {Post_MailSignOK} = require('./Post_MailSignOK');
+const {Post_MailContact} = require('./Post_MailContact');
+const {Post_LogIN, Post_LogOUT} = require('./Post_Log_IN-OUT');
+
+// ==============================
+// Export des contrôleurs
+// ==============================
+module.exports = {
+	// GET
+	Get_Agent,
+	Get_CheckUserStatus,
+	Get_CheckCookies,
+	Get_JwtToken,
+	Get_AllMembers,
+
+	// POST
+	Post_ChangePwd,
+	Post_SignUser,
+	Post_Reject_1Friend,
+	Post_MailSignOK,
+	Post_MailContact,
+	Post_LogIN,
+	Post_LogOUT,
+};
+
+
+router.get('/getAgent', Get_Agent);
+router.get('/checkUser', Get_CheckUserStatus);
+router.get('/checkCookies', Get_CheckCookies);
+router.get('/getJwtToken', Get_JwtToken);
+router.get('/getAllMembers', Get_AllMembers);	
+
+router.post('/changePWD', Post_ChangePwd);
+router.post('/signUser', Post_SignUser);
+router.post('/reject1Friend', Post_Reject_1Friend);
+router.post('/mailSignOK', Post_MailSignOK);
+router.post('/mailContact', Post_MailContact);
+router.post('/logIN', Post_LogIN);
+router.post('/logOUT', Post_LogOUT);	
+// ==============================
+
+// Exportation du routeur pour utilisation dans votre application principale
+module.exports = router;
 
 
 
-// Import de la fonction getInfo depuis le contrôleur
-const { getInfo } = require("../controllers/infoController");
-const { changePWD_post } = require('../controllers/ControlChangePwd');
-const { checkUser } = require('../controllers/ControlCheckUser');
-const { signUser_post } = require('../controllers/ControlSignUser');
-const { signConfirm_post } = require('../controllers/ControlMailSignOK');
-
-// Définition de la route /info qui va utiliser la fonction getInfo
-router.get("/info", getInfo);
-router.get("/checkUser", checkUser);
+// Définition de la route /info qui va utiliser la fonction getAgent
+// router.get("/getAgent", getAgent);
+// router.get("/checkUser", checkUser);
 
 // Route pour changer le mot de passe
-router
-	.route('/api/changePWD')
-	
-	.get(async (req, res) => {
-		// Par exemple, retourner des informations sur la modification de mot de passe (cela peut être adapté)
-		res.status(200).json({
-			message: 'Utilisez POST pour changer votre mot de passe.',
-		});
-	})
-	.post(changePWD_post); 
+// router
+// 	.route('/api/changePWD')
+
+// 	.get(async (req, res) => {
+// 		// Par exemple, retourner des informations sur la modification de mot de passe (cela peut être adapté)
+// 		res.status(200).json({
+// 			message: 'Utilisez POST pour changer votre mot de passe.',
+// 		});
+// 	})
+// 	.post(changePWD_post);
 
 // Route pour créer un nouvel utilisateur
-router.route('/api/signUser').get(async (req, res) => {
-	// Par exemple, retourner des informations sur la création d'utilisateur (cela peut être adapté)
-	res.status(200).json({
-		message: 'Utilisez POST pour créer un nouvel utilisateur.',
-	});
-}).post(signUser_post);
+// router.route('/api/signUser').get(async (req, res) => {
+// 	// Par exemple, retourner des informations sur la création d'utilisateur (cela peut être adapté)
+// 	res.status(200).json({
+// 		message: 'Utilisez POST pour créer un nouvel utilisateur.',
+// 	});
+// }).post(signUser_post);
 
+// router
+// 	.route('/api/mailSignOK')
+// 	.get(async (req, res) => {
+// 		// Par exemple, retourner des informations sur la confirmation d'inscription par email (cela peut être adapté)
+// 		res.status(200).json({
+// 			message: 'Utilisez POST pour confirmer l’inscription par email.',
+// 		});
+// 	})
+// 	.post(signConfirm_post);
 
-router
-	.route('/api/mailSignOK')
-	.get(async (req, res) => {
-		// Par exemple, retourner des informations sur la confirmation d'inscription par email (cela peut être adapté)
-		res.status(200).json({
-			message: 'Utilisez POST pour confirmer l’inscription par email.',
-		});
-	})
-	.post(signConfirm_post);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Exportation du routeur pour utilisation dans votre application principale
 
 //##        création utilisateur du 15 août 2024
-
 
 // module.exports.signUser_post = async (req, res) => {
 
@@ -80,7 +107,6 @@ router
 // 		'🚀 ~ routesControl.js:1114 ~ SIGNUSER ~ req.body  ==> ',
 // 		req.body
 // 	);
-
 
 // 	const {pseudo, email, pwd} = req.body;
 
@@ -92,12 +118,10 @@ router
 // 		});
 // 	}
 
-
 // 	console.log(
 // 		'🚀 ~ routesControl.js:1131 ~ module.exports.signUser_post= ~ email  ==> ',
 // 		email
 // 	);
-
 
 // 	console.log(
 // 		'🚀 ~ routesControl.js:1137 ~ module.exports.signUser_post= ~ pwd  ==> ',
@@ -159,10 +183,7 @@ router
 // 	}
 // };
 
-
-
 //##                           UTILISATEUR  - -                                -
-
 
 //##    Méthode de déconnexion valide le 15 août
 
@@ -176,7 +197,6 @@ router
 // 	});
 // 	res.redirect('/');
 // };
-
 
 // module.exports.search_post = (req, res) => {
 // 	const {pseudo, email} = req.body;

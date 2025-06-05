@@ -13,6 +13,42 @@
 // const https = require('https');
 // const http = require('http');
 
+
+
+// 🛠️ Application des middlewares
+
+// 🔹 Enregistrer l'adresse IP de la requête
+// app.use((req, res, next) => {
+// 	ipAddressGlobal =
+// 		req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+// 	console.log('📍 IP enregistrée :', ipAddressGlobal);
+// 	next();
+// });
+
+
+
+// 🔹 Log de l'hôte de la requête
+// app.use((req, res, next) => {
+// 	myHost = req.get('host');
+// 	console.log('🚀 ~ Host de la requête :', myHost);
+// 	next();
+// });
+
+
+
+// 🔹 Configuration des vues
+// app.set('view engine', 'ejs');
+// app.set('views', [
+// 	path.join(__dirname, 'views'),
+// 	path.join(__dirname, 'views/partials'),
+// 	path.join(__dirname, 'views/pages'),
+// 	path.join(__dirname, 'more_views'),
+// ]);
+
+// 🔹 Gestion des fichiers statiques
+// app.use(express.static('public'));
+// app.use('/js', express.static(path.join(__dirname, 'js')));
+
 const corsOptionsPROD = {
 	origin: (origin, callback) => {
 		console.log(`🔹 Vérification de l'origine : ${origin}`);

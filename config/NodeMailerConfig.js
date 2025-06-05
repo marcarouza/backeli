@@ -2,11 +2,6 @@
 require('dotenv').config();
 const nodemailer = require('nodemailer');
 
-
-
-
-
-
 // Transporteur pour Eli
 const transporterEli = nodemailer.createTransport({
 	host: process.env.ELI_SMTP_HOST || 'eliazoura.fr',
@@ -62,7 +57,7 @@ const transporter2 = nodemailer.createTransport({
 
 // Vérification de la configuration : cette commande permet de s'assurer dès le démarrage que
 // la connexion au serveur SMTP peut être établie.
-transporter.verify(function (error, success) {
+transporterEli.verify(function (error, success) {
 	if (error) {
 		console.error(
 			'Erreur lors de la vérification du transporteur : ',
@@ -75,4 +70,4 @@ transporter.verify(function (error, success) {
 	}
 });
 
-module.exports = transporter;
+module.exports = transporterEli;

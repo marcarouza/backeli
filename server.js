@@ -3,10 +3,11 @@ require('dotenv').config();
 
 const listEndpoints = require('express-list-endpoints');
 
+const router = require('express').Router();
 
 // 🔹 Modules système
-const fs = require('fs');
-const path = require('path');
+// const fs = require('fs');
+// const path = require('path');
 
 // 🔹 Modules tiers
 const express = require('express');
@@ -14,43 +15,43 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-const {countDoc} = require('./actionDB');
+// const {countDoc} = require('./actionDB');
 
 const useragent = require('express-useragent');
 
 // 🎯 Initialisation Express
 const app = express();
 
-let myHost;
-let ipAddressGlobal;
+const {uriMEMBRES, clusterName} = require('./config/MongoConfig');
+
+// 🔹 Importation des CONTROLERS
+
+
+const {
+	// GET routes
+	Get_Agent,
+	Get_CheckUserStatus,
+	Get_CheckCookies,
+	Get_AllMembers,
+	Get_JwtToken,
+
+	// POST routes
+	Post_SignUser,
+	Post_ChangePwd,
+	Post_MailSignOK,
+	Post_MailContact,
+	Post_LogIN,
+	Post_LogOUT,
+	Post_Reject_1Friend,
+} = require('./controllers/routesControl');
+ 
+
+
 
 //??// 🔹 Chargement des route
-// 
-// 
-// Import de la fonction getInfo depuis le contrôleur
-const { getInfo } = require("./controllers/ControlAgent");
 
-// Définition de la route /info qui va utiliser la fonction getInfo
-router.get("/info", getInfo);
+router.use(express.json());
 
-// 
-// 
-// 
-// s
-
-
-// Configuration de MongoDB
-const uriMEMBRES = process.env.URI_MEMBRES;
-
-console.log('🚀 ------------------------------------------------🚀');
-console.log('🚀 ~ server.js:192 ~ uriMEMBRES  ==> ', uriMEMBRES);
-console.log('🚀 ------------------------------------------------🚀');
-
-const clusterName = uriMEMBRES.match(/@([^.]*)\./)[1].toUpperCase();
-
-console.log('🚀 --------------------------------------------------🚀');
-console.log('🚀 ~ server.js:198 ~ clusterName  ==> ', clusterName);
-console.log('🚀 --------------------------------------------------🚀');
 
 mongoose.set('debug', true);
 
@@ -80,21 +81,12 @@ const allowedOrigins = [
 
 const corsOptions = {
 	origin: allowedOrigins,
-	methods: ['GET', 'POST', 'PUT', 'DELETE'],
+	methods: ['GET', 'POST'],
 	credentials: true,
 	optionsSuccessStatus: 200,
 };
 
 
-// 🛠️ Application des middlewares
-
-// 🔹 Enregistrer l'adresse IP de la requête
-// app.use((req, res, next) => {
-// 	ipAddressGlobal =
-// 		req.headers['x-forwarded-for'] || req.socket.remoteAddress;
-// 	console.log('📍 IP enregistrée :', ipAddressGlobal);
-// 	next();
-// });
 
 // 🔹 Middleware CORS (placé avant le traitement des requêtes)
 app.use(cors(corsOptions));
@@ -109,27 +101,6 @@ app.use(cookieParser());
 // 🔹 Détection du User-Agent
 app.use(useragent.express());
 
-// 🔹 Log de l'hôte de la requête
-// app.use((req, res, next) => {
-// 	myHost = req.get('host');
-// 	console.log('🚀 ~ Host de la requête :', myHost);
-// 	next();
-// });
-
-
-
-// 🔹 Configuration des vues
-app.set('view engine', 'ejs');
-app.set('views', [
-	path.join(__dirname, 'views'),
-	path.join(__dirname, 'views/partials'),
-	path.join(__dirname, 'views/pages'),
-	path.join(__dirname, 'more_views'),
-]);
-
-// 🔹 Gestion des fichiers statiques
-app.use(express.static('public'));
-app.use('/js', express.static(path.join(__dirname, 'js')));
 
 // 🌐 Connexion à MongoDB
 const dbURI =
@@ -156,25 +127,15 @@ app.use((err, req, res, next) => {
 	res.status(500).send('Erreur serveur interne');
 });
 
-
-
-// Routes
-const routes = require('./routes/routes');
-
-app.get('/', (req, res) => {
-	res.send('Hello Render!');
-});
-app.get('/test', (req, res) => {
-	res.send('Hello TEST Render!');
-});
-
-app.use('/', routes);
-
-
-
-
 console.log('Liste des endpoints :', listEndpoints(app));
 
+
+
+// 🔹 Routes GET
+const routes = require('./controllers/routesControl');
+
+
+app.use('/', routes);
 
 
 
@@ -183,7 +144,7 @@ const PORT = process.env.PORT || 3000;
 
 // 🚀 Démarrage du serveur (écoute sur 0.0.0.0 pour Render)
 app.listen(PORT, () => {
-	console.log(`✅ Serveur démarré sur le PORT ${PORT}, Host: ${myHost}`);
+	// console.log(`✅ Serveur démarré sur le PORT ${PORT}, Host: ${myHost}`);
 	const serverUrl = `http://localhost:${PORT}`;
 	console.log(`✅ Serveur démarré sur : ${serverUrl}`);
 
