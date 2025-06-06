@@ -108,11 +108,13 @@ const allowedOrigins = [
 	'http://back.eliazoura.fr',
 	'http://test.eliazoura.fr',
 	'https://test.eliazoura.fr',
-	/192\.168\.3\.19:\d+$/,
-	/192\.234\.164\.249:\d+$/,
+	/^(https?:\/\/)?(.*\.)?(eliazoura\.fr|onrender\.com)(?::\d+)?$/,
 	/localhost(?:\:\d+)?$/,
 	/93\.9\.238\.29(?::\d+)?$/, // Autorise 93.9.238.29, avec ou sans port
+	/127\.0\.0\.1(?::\d+)?$/, // Autorise 127.0.0.1, avec ou sans port
+	/109\.234\.164\.249(?::\d+)?$/, // Autorise 109.234.164.249, avec ou sans port
 ];
+ 
 
 const corsOptions = {
 	origin: (origin, callback) => {
