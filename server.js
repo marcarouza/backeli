@@ -55,29 +55,46 @@ const allowedOrigins = [
 	/localhost:\d+$/,
  ];
  
- const corsOptions = {
-	origin: (origin, callback) => {
-	  // Autoriser les requêtes sans origine (par exemple, les appels depuis des clients non web)
-	  if (!origin) return callback(null, true);
+//  const corsOptions = {
+// 	origin: (origin, callback) => {
+// 	  // Autoriser les requêtes sans origine (par exemple, les appels depuis des clients non web)
+// 	  if (!origin) return callback(null, true);
 	  
-	  // Vérifier si l'origine correspond à l'une des valeurs autorisées (chaîne ou regexp)
-	  const allowed = allowedOrigins.some((allowedOrigin) => {
-		 return allowedOrigin instanceof RegExp
-			? allowedOrigin.test(origin)
-			: allowedOrigin === origin;
-	  });
+// 	  // Vérifier si l'origine correspond à l'une des valeurs autorisées (chaîne ou regexp)
+// 	  const allowed = allowedOrigins.some((allowedOrigin) => {
+// 		 return allowedOrigin instanceof RegExp
+// 			? allowedOrigin.test(origin)
+// 			: allowedOrigin === origin;
+// 	  });
 	  
-	  if (allowed) {
-		 callback(null, true);
-	  } else {
-		 callback(new Error('Not allowed by CORS'));
-	  }
-	},
-	methods: ['GET', 'POST'],
-	credentials: true,
-	optionsSuccessStatus: 200, // Certains anciens navigateurs nécessitent un code 200 pour les requêtes OPTIONS.
- };
+// 	  if (allowed) {
+// 		 callback(null, true);
+// 	  } else {
+// 		 callback(new Error('Not allowed by CORS'));
+// 	  }
+// 	},
+// 	methods: ['GET', 'POST'],
+// 	credentials: true,
+// 	optionsSuccessStatus: 200, // Certains anciens navigateurs nécessitent un code 200 pour les requêtes OPTIONS.
+//  };
  
+
+
+const corsOptions = {
+	origin: (origin, callback) => {
+		// Si l'origine n'est pas définie (par exemple dans certains cas comme les requêtes faites via Postman),
+		// on la laisse passer.
+		if (!origin) return callback(null, true);
+		// Pour toutes les autres requêtes, on renvoie exactement l'origine de la requête.
+		callback(null, origin);
+	},
+	credentials: true,
+	optionsSuccessStatus: 200,
+};
+
+
+
+
 // Application du middleware CORS (si non défini dans setupApp)
  app.use(cors(corsOptions));
  
