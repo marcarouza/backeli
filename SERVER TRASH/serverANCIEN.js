@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const express = require('express');
 const bodyParser = require('body-parser');
-const {countDoc} = require('./actionDB');
+const {countDoc} = require('../actionDB');
 const path = require('path');
 const useragent = require('express-useragent');
 
