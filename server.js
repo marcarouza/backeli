@@ -111,8 +111,6 @@ const allowedOrigins = [
 	/^(https?:\/\/)?(.*\.)?(eliazoura\.fr|onrender\.com)(?::\d+)?$/,
 	/localhost(?:\:\d+)?$/,
 	/93\.9\.238\.29(?::\d+)?$/, // Autorise 93.9.238.29, avec ou sans port
-	/127\.0\.0\.1(?::\d+)?$/, // Autorise 127.0.0.1, avec ou sans port
-	/109\.234\.164\.249(?::\d+)?$/, // Autorise 109.234.164.249, avec ou sans port
 ];
  
 
@@ -173,6 +171,14 @@ app.use((err, req, res, next) => {
 		error: err.message || 'Server Error',
 		...(process.env.NODE_ENV === 'development' && {stack: err.stack}),
 	});
+});
+
+// Routes fallback pour le front-end (SPA)
+app.get('/', (req, res) => {
+	res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+app.get('/*', (req, res) => {
+	res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 // 15. Démarrage du serveur
