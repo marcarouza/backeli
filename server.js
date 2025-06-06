@@ -106,9 +106,12 @@ const allowedOrigins = [
 	'https://elifront.onrender.com',
 	'https://back.eliazoura.fr',
 	'http://back.eliazoura.fr',
+	'http://test.eliazoura.fr',
+	'https://test.eliazoura.fr',
 	/192\.168\.3\.19:\d+$/,
 	/192\.234\.164\.249:\d+$/,
 	/localhost(?:\:\d+)?$/,
+	/93\.9\.238\.29(?::\d+)?$/, // Autorise 93.9.238.29, avec ou sans port
 ];
 
 const corsOptions = {
