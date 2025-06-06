@@ -53,20 +53,20 @@ const allowedOrigins = [
 	/192\.168\.3\.19:\d+$/,
 	/192\.234\.164\.249:\d+$/,
 	/localhost:\d+$/,
- ];
- 
+];
+
 //  const corsOptions = {
 // 	origin: (origin, callback) => {
 // 	  // Autoriser les requêtes sans origine (par exemple, les appels depuis des clients non web)
 // 	  if (!origin) return callback(null, true);
-	  
+
 // 	  // Vérifier si l'origine correspond à l'une des valeurs autorisées (chaîne ou regexp)
 // 	  const allowed = allowedOrigins.some((allowedOrigin) => {
 // 		 return allowedOrigin instanceof RegExp
 // 			? allowedOrigin.test(origin)
 // 			: allowedOrigin === origin;
 // 	  });
-	  
+
 // 	  if (allowed) {
 // 		 callback(null, true);
 // 	  } else {
@@ -77,12 +77,8 @@ const allowedOrigins = [
 // 	credentials: true,
 // 	optionsSuccessStatus: 200, // Certains anciens navigateurs nécessitent un code 200 pour les requêtes OPTIONS.
 //  };
- 
-
 
 const corsOptions = {
-
-
 	origin: (origin, callback) => {
 		// Si l'origine n'est pas définie (par exemple dans certains cas comme les requêtes faites via Postman),
 		// on la laisse passer.
@@ -90,20 +86,16 @@ const corsOptions = {
 		// Pour toutes les autres requêtes, on renvoie exactement l'origine de la requête.
 		callback(null, origin);
 	},
-	credentials: true,
+	credentials: false,
 	optionsSuccessStatus: 200,
 };
-
-
 
 console.log('🚀 -------------------------------------------------🚀');
 console.log('🚀 ~ server.js:85 ~ corsOptions  ==> ', corsOptions);
 console.log('🚀 -------------------------------------------------🚀');
 
 // Application du middleware CORS (si non défini dans setupApp)
- app.use(cors(corsOptions));
- 
-
+app.use(cors(corsOptions));
 
 // Si nécessaire, ré-appliquer le parsing JSON, les cookies et la détection du User-Agent.
 // (Ces middlewares peuvent déjà être installés dans setupApp, à adapter selon vos besoins.)
