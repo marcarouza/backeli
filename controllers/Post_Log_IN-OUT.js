@@ -2,8 +2,9 @@ const { lambdaModel } = require('../models/allSchemas');
 const jwt = require('jsonwebtoken');
 
 
+
 const createToken = (id) => {
-	return jwt.sign({id}, process.env.JET, {expiresIn: maxAge});
+	return jwt.sign({id}, process.env.JET, {expiresIn: process.env.MAX_AGE || '31d'});
 };
 
 //##                LOG OUT                               -
@@ -46,16 +47,6 @@ module.exports.Post_LogOUT= async (req, res) => {
 	}
 };
 
-// module.exports.logOut_get = (req, res) => {
-// 	res.cookie('jwt', '', {
-// 		httpOnly: false, // Changé à true pour plus de sécurité
-// 		maxAge: 1,
-// 		sameSite: 'None',
-// 		secure: true,
-// 		path: '/',
-// 	});
-// 	res.redirect('/');
-// };
 
 //##                CONNEXION REELLE                                   -
 
@@ -82,8 +73,10 @@ module.exports.Post_LogIN = async (req, res) => {
 		// Si la connexion réussit, envoyer une réponse positive
 		res.status(200).json({success: true, user});
 	} catch (err) {
+
+
 		console.error(
-			'🧨 🧨 🧨 FROM LOGUSER-POST in routesControl unexpected ERR occurred:',
+			'🚀 ~ Post_Log_IN-OUT.js:78~ module.exports.Post_LogIN= ~ err  ==> ',
 			err.message
 		);
 		res.status(400).json({success: false, message: err.message}); // Renvoie l'erreur au frontend
