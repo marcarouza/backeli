@@ -55,43 +55,49 @@ const allowedOrigins = [
 	/localhost:\d+$/,
 ];
 
-//  const corsOptions = {
-// 	origin: (origin, callback) => {
-// 	  // Autoriser les requêtes sans origine (par exemple, les appels depuis des clients non web)
-// 	  if (!origin) return callback(null, true);
-
-// 	  // Vérifier si l'origine correspond à l'une des valeurs autorisées (chaîne ou regexp)
-// 	  const allowed = allowedOrigins.some((allowedOrigin) => {
-// 		 return allowedOrigin instanceof RegExp
-// 			? allowedOrigin.test(origin)
-// 			: allowedOrigin === origin;
-// 	  });
-
-// 	  if (allowed) {
-// 		 callback(null, true);
-// 	  } else {
-// 		 callback(new Error('Not allowed by CORS'));
-// 	  }
-// 	},
-// 	methods: ['GET', 'POST'],
-// 	credentials: true,
-// 	optionsSuccessStatus: 200, // Certains anciens navigateurs nécessitent un code 200 pour les requêtes OPTIONS.
-//  };
 
 const corsOptions = {
 	origin: (origin, callback) => {
-		// Si l'origine n'est pas définie (par exemple dans certains cas comme les requêtes faites via Postman),
-		// on la laisse passer.
+		// Afficher l'origine de la requête dans la console
+		console.log(' ☘️ Origine de la requête => ', origin);
+		// Pour les requêtes sans origin (ex : certains outils ou cas non-navigateur), on les autorise
 		if (!origin) return callback(null, true);
-		// Pour toutes les autres requêtes, on renvoie exactement l'origine de la requête.
-		callback(null, origin);
+
+		const allowed = allowedOrigins.some((allowedOrigin) => {
+		console.log('☘️ Origine de la requête => ', origin);
+
+			return allowedOrigin instanceof RegExp
+				? allowedOrigin.test(origin)
+				: allowedOrigin === origin;
+		});
+
+		// Si l'origine est autorisée, renvoyer exactement cette origine
+		if (allowed) {
+			return callback(null, origin);
+		} else {
+			return callback(new Error('Not allowed by CORS'));
+		}
 	},
-	credentials: false,
+	methods: ['GET', 'POST'],
+	credentials: true,
 	optionsSuccessStatus: 200,
 };
 
+// const corsOptions = {
+// 	origin: (origin, callback) => {
+// 		// Si l'origine n'est pas définie (par exemple dans certains cas comme les requêtes faites via Postman),
+// 		// on la laisse passer.
+// 		if (!origin) return callback(null, true);
+// 		// Pour toutes les autres requêtes, on renvoie exactement l'origine de la requête.
+// 		callback(null, origin);
+// 	},
+// 	credentials: false,
+// 	optionsSuccessStatus: 200,
+// };
+
 console.log('🚀 -------------------------------------------------🚀');
 console.log('🚀 ~ server.js:85 ~ corsOptions  ==> ', corsOptions);
+
 console.log('🚀 -------------------------------------------------🚀');
 
 // Application du middleware CORS (si non défini dans setupApp)
