@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Eliazoura.fr-NodeJS / Express Server</title>
+   <title>Eliazoura.fr - NodeJS / Express Server</title>
    <style>
       body {
          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -18,7 +18,7 @@
       .container {
          max-width: 800px;
          margin: 0 auto;
-         background: white;
+         background: #fff;
          padding: 2rem;
          border-radius: 8px;
          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -65,44 +65,58 @@
 
 <body>
    <div class="container">
-      <h1>Eliazoura.fr-NodeJS / Express Server</h1>
+      <h1>Eliazoura.fr - NodeJS / Express Server</h1>
+
       <div class="info-grid">
          <div class="info-card">
             <h2>Server Information</h2>
             <p>Version: <span id="version">1.0.0</span></p>
-            <p>Node.js: <span id="nodeVersion"></span></p>
-            <p>Environment: <span id="environment"></span></p>
+            <p>Node.js: <span id="nodeVersion">Chargement...</span></p>
+            <p>Environment: <span id="environment">Chargement...</span></p>
          </div>
          <div class="info-card">
             <h2>Status</h2>
             <p>Status: <span id="status">Running</span></p>
-            <p>Uptime: <span id="uptime"></span></p>
-            <p>Memory Usage: <span id="memory"></span></p>
+            <p>Uptime: <span id="uptime">Chargement...</span></p>
+            <p>Memory Usage: <span id="memory">Chargement...</span></p>
          </div>
       </div>
+
       <div class="endpoints">
          <h2>Available Endpoints</h2>
-         <div id="endpointsList"></div>
+         <div id="endpointsList">Chargement...</div>
       </div>
    </div>
+
    <script>
-      // Fetch server information
+      // Récupération des informations du serveur
       fetch('/api/server-info')
-         .then(response => response.json())
+         .then(response => {
+            if (!response.ok) {
+               throw new Error(`Erreur HTTP : ${response.status}`);
+            }
+            return response.json();
+         })
          .then(data => {
             document.getElementById('nodeVersion').textContent = data.nodeVersion;
             document.getElementById('environment').textContent = data.environment;
             document.getElementById('uptime').textContent = data.uptime;
             document.getElementById('memory').textContent = data.memoryUsage;
 
-            // Display endpoints
+            // Affichage des endpoints
             const endpointsList = document.getElementById('endpointsList');
+            endpointsList.innerHTML = ''; // On vide le contenu "Chargement..."
             data.endpoints.forEach(endpoint => {
                const div = document.createElement('div');
                div.className = 'endpoint';
                div.textContent = `${endpoint.method} ${endpoint.path}`;
                endpointsList.appendChild(div);
             });
+         })
+         .catch(error => {
+            console.error('Erreur lors de la récupération du server-info :', error);
+            document.getElementById('endpointsList').innerHTML =
+               '<p style="color:red;">Erreur de chargement des endpoints</p>';
          });
    </script>
 </body>
