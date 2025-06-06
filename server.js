@@ -17,7 +17,10 @@ const listEndpoints = require('express-list-endpoints');
 
 // 4. Initialisation de l'application Express
 const app = express();
-
+app.use((req, res, next) => {
+	console.log('❤️ En-têtes de la requête :', req.headers);
+	next();
+});
 // 5. Connexion à MongoDB
 const {uriMEMBRES} = require('./config/MongoConfig');
 mongoose.set('debug', true);
