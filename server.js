@@ -81,6 +81,8 @@ const allowedOrigins = [
 
 
 const corsOptions = {
+
+
 	origin: (origin, callback) => {
 		// Si l'origine n'est pas définie (par exemple dans certains cas comme les requêtes faites via Postman),
 		// on la laisse passer.
@@ -94,6 +96,9 @@ const corsOptions = {
 
 
 
+console.log('🚀 -------------------------------------------------🚀');
+console.log('🚀 ~ server.js:85 ~ corsOptions  ==> ', corsOptions);
+console.log('🚀 -------------------------------------------------🚀');
 
 // Application du middleware CORS (si non défini dans setupApp)
  app.use(cors(corsOptions));
