@@ -31,8 +31,8 @@ mongoose.set('debug', true);
 // Connexion à MongoDB en utilisant uriMEMBRES du fichier de configuration
 mongoose
 	.connect(uriMEMBRES, {
-		useNewUrlParser: true,
-		useUnifiedTopology: true,
+		// useNewUrlParser: true,
+		// useUnifiedTopology: true,
 	})
 	.then(() =>
 		console.log(
@@ -40,7 +40,6 @@ mongoose
 		)
 	)
 	.catch((error) => console.error('Erreur de connexion à la BDD:', error));
-
 // 🌍 Configuration CORS avec gestion des origines dynamiques
 const allowedOrigins = [
 	'https://eliazoura.fr',
@@ -54,17 +53,35 @@ const allowedOrigins = [
 	/192\.168\.3\.19:\d+$/,
 	/192\.234\.164\.249:\d+$/,
 	/localhost:\d+$/,
-];
-
-const corsOptions = {
-	origin: allowedOrigins,
+ ];
+ 
+ const corsOptions = {
+	origin: (origin, callback) => {
+	  // Autoriser les requêtes sans origine (par exemple, les appels depuis des clients non web)
+	  if (!origin) return callback(null, true);
+	  
+	  // Vérifier si l'origine correspond à l'une des valeurs autorisées (chaîne ou regexp)
+	  const allowed = allowedOrigins.some((allowedOrigin) => {
+		 return allowedOrigin instanceof RegExp
+			? allowedOrigin.test(origin)
+			: allowedOrigin === origin;
+	  });
+	  
+	  if (allowed) {
+		 callback(null, true);
+	  } else {
+		 callback(new Error('Not allowed by CORS'));
+	  }
+	},
 	methods: ['GET', 'POST'],
 	credentials: true,
-	optionsSuccessStatus: 200,
-};
-
+	optionsSuccessStatus: 200, // Certains anciens navigateurs nécessitent un code 200 pour les requêtes OPTIONS.
+ };
+ 
 // Application du middleware CORS (si non défini dans setupApp)
-app.use(cors(corsOptions));
+ app.use(cors(corsOptions));
+ 
+
 
 // Si nécessaire, ré-appliquer le parsing JSON, les cookies et la détection du User-Agent.
 // (Ces middlewares peuvent déjà être installés dans setupApp, à adapter selon vos besoins.)
