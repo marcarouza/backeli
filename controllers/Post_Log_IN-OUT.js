@@ -1,4 +1,10 @@
-const {lambdaModel} = require('../models/allSchemas');
+const { lambdaModel } = require('../models/allSchemas');
+const jwt = require('jsonwebtoken');
+
+
+const createToken = (id) => {
+	return jwt.sign({id}, process.env.JET, {expiresIn: maxAge});
+};
 
 //##                LOG OUT                               -
 
