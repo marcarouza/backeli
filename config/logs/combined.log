@@ -98,3 +98,245 @@
 2025-06-06 16:57:46 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
 2025-06-06 16:57:46 [INFO]: Response: 200 OK - 8ms
 2025-06-06 16:57:46 [INFO]: [0mGET / [32m200[0m 4.359 ms - -[0m
+2025-06-06 18:09:09 [INFO]: Server running on port 3000
+2025-06-06 18:09:09 [INFO]: Node.js version: v20.17.0
+2025-06-06 18:09:15 [INFO]: Request: GET / from ::1
+2025-06-06 18:09:15 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:09:15 [INFO]: Response: 200 OK - 7ms
+2025-06-06 18:09:15 [INFO]: [0mGET / [32m200[0m 4.280 ms - -[0m
+2025-06-06 18:09:15 [INFO]: Request: GET /api/server-info from ::1
+2025-06-06 18:09:15 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:09:15 [INFO]: Response: 200 OK - 8ms
+2025-06-06 18:09:15 [INFO]: [0mGET /api/server-info [32m200[0m 7.072 ms - -[0m
+2025-06-06 18:09:15 [INFO]: Request: GET /favicon.ico from ::1
+2025-06-06 18:09:15 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:09:15 [INFO]: Response: 200 OK - 1ms
+2025-06-06 18:09:15 [INFO]: [0mGET /favicon.ico [32m200[0m 1.072 ms - -[0m
+2025-06-06 18:14:28 [INFO]: Server running on port 3000
+2025-06-06 18:14:28 [INFO]: Node.js version: v20.17.0
+2025-06-06 18:14:38 [INFO]: Request: GET / from ::1
+2025-06-06 18:14:38 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:14:38 [INFO]: Response: 200 OK - 6ms
+2025-06-06 18:14:38 [INFO]: [0mGET / [32m200[0m 4.401 ms - -[0m
+2025-06-06 18:14:38 [INFO]: Request: GET /assets/index-BJJjQqHm.js from ::1
+2025-06-06 18:14:38 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:14:38 [INFO]: Request: GET /assets/index-D9_G3fTA.css from ::1
+2025-06-06 18:14:38 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:14:38 [INFO]: Response: 200 OK - 26ms
+2025-06-06 18:14:38 [INFO]: Response: 200 OK - 18ms
+2025-06-06 18:14:38 [INFO]: [0mGET /assets/index-BJJjQqHm.js [32m200[0m 25.399 ms - -[0m
+2025-06-06 18:14:38 [INFO]: [0mGET /assets/index-D9_G3fTA.css [32m200[0m 16.818 ms - -[0m
+2025-06-06 18:14:38 [INFO]: Request: GET /pix/logos/elilogo.png from ::1
+2025-06-06 18:14:38 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:14:38 [INFO]: Response: 200 OK - 1ms
+2025-06-06 18:14:38 [INFO]: [0mGET /pix/logos/elilogo.png [32m200[0m 1.146 ms - -[0m
+2025-06-06 18:14:38 [INFO]: Request: GET /pix/logos/favicon32.png from ::1
+2025-06-06 18:14:38 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:14:38 [INFO]: Response: 200 OK - 1ms
+2025-06-06 18:14:38 [INFO]: [0mGET /pix/logos/favicon32.png [32m200[0m 0.862 ms - -[0m
+2025-06-06 18:14:38 [INFO]: Request: GET /pix/logos/favicon-16x16.png from ::1
+2025-06-06 18:14:38 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:14:38 [INFO]: Response: 200 OK - 2ms
+2025-06-06 18:14:38 [INFO]: [0mGET /pix/logos/favicon-16x16.png [32m200[0m 1.628 ms - -[0m
+2025-06-06 18:14:43 [INFO]: Request: GET / from ::1
+2025-06-06 18:14:43 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:14:43 [INFO]: Response: 304 undefined - 2ms
+2025-06-06 18:14:43 [INFO]: [0mGET / [36m304[0m 3.778 ms - -[0m
+2025-06-06 18:14:43 [INFO]: Request: GET /assets/index-BJJjQqHm.js from ::1
+2025-06-06 18:14:43 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:14:43 [INFO]: Response: 304 undefined - 2ms
+2025-06-06 18:14:43 [INFO]: [0mGET /assets/index-BJJjQqHm.js [36m304[0m 2.375 ms - -[0m
+2025-06-06 18:14:43 [INFO]: Request: GET /assets/index-D9_G3fTA.css from ::1
+2025-06-06 18:14:43 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:14:43 [INFO]: Response: 304 undefined - 0ms
+2025-06-06 18:14:43 [INFO]: [0mGET /assets/index-D9_G3fTA.css [36m304[0m 0.782 ms - -[0m
+2025-06-06 18:14:43 [INFO]: Request: GET /pix/logos/elilogo.png from ::1
+2025-06-06 18:14:43 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:14:43 [INFO]: Response: 304 undefined - 1ms
+2025-06-06 18:14:43 [INFO]: [0mGET /pix/logos/elilogo.png [36m304[0m 0.802 ms - -[0m
+2025-06-06 18:14:43 [INFO]: Request: GET /pix/logos/favicon32.png from ::1
+2025-06-06 18:14:43 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:14:43 [INFO]: Response: 304 undefined - 2ms
+2025-06-06 18:14:43 [INFO]: [0mGET /pix/logos/favicon32.png [36m304[0m 1.772 ms - -[0m
+2025-06-06 18:14:43 [INFO]: Request: GET /pix/logos/favicon-16x16.png from ::1
+2025-06-06 18:14:43 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:14:43 [INFO]: Response: 304 undefined - 1ms
+2025-06-06 18:14:43 [INFO]: [0mGET /pix/logos/favicon-16x16.png [36m304[0m 0.615 ms - -[0m
+2025-06-06 18:15:29 [INFO]: Request: GET /assets/index-D9_G3fTA.css from ::1
+2025-06-06 18:15:29 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:15:29 [INFO]: Response: 304 undefined - 1ms
+2025-06-06 18:15:29 [INFO]: [0mGET /assets/index-D9_G3fTA.css [36m304[0m 1.411 ms - -[0m
+2025-06-06 18:15:29 [INFO]: Request: GET /.well-known/appspecific/com.chrome.devtools.json from ::1
+2025-06-06 18:15:29 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:15:29 [INFO]: Response: 200 OK - 2ms
+2025-06-06 18:15:29 [INFO]: [0mGET /.well-known/appspecific/com.chrome.devtools.json [32m200[0m 0.959 ms - -[0m
+2025-06-06 18:15:51 [INFO]: Request: GET / from ::1
+2025-06-06 18:15:51 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:15:51 [INFO]: Response: 304 undefined - 2ms
+2025-06-06 18:15:51 [INFO]: [0mGET / [36m304[0m 1.693 ms - -[0m
+2025-06-06 18:15:51 [INFO]: Request: GET /.well-known/appspecific/com.chrome.devtools.json from ::1
+2025-06-06 18:15:51 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:15:51 [INFO]: Response: 304 undefined - 0ms
+2025-06-06 18:15:51 [INFO]: [0mGET /.well-known/appspecific/com.chrome.devtools.json [36m304[0m 1.060 ms - -[0m
+2025-06-06 18:15:51 [INFO]: Request: GET /assets/index-D9_G3fTA.css from ::1
+2025-06-06 18:15:51 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:15:51 [INFO]: Response: 304 undefined - 3ms
+2025-06-06 18:15:51 [INFO]: [0mGET /assets/index-D9_G3fTA.css [36m304[0m 3.394 ms - -[0m
+2025-06-06 18:15:51 [INFO]: Request: GET /assets/index-BJJjQqHm.js from ::1
+2025-06-06 18:15:51 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:15:51 [INFO]: Response: 304 undefined - 2ms
+2025-06-06 18:15:51 [INFO]: [0mGET /assets/index-BJJjQqHm.js [36m304[0m 2.706 ms - -[0m
+2025-06-06 18:15:51 [INFO]: Request: GET /pix/logos/elilogo.png from ::1
+2025-06-06 18:15:51 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:15:51 [INFO]: Response: 304 undefined - 2ms
+2025-06-06 18:15:51 [INFO]: [0mGET /pix/logos/elilogo.png [36m304[0m 3.873 ms - -[0m
+2025-06-06 18:15:51 [INFO]: Request: GET /pix/logos/favicon32.png from ::1
+2025-06-06 18:15:51 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:15:51 [INFO]: Response: 304 undefined - 2ms
+2025-06-06 18:15:51 [INFO]: [0mGET /pix/logos/favicon32.png [36m304[0m 1.984 ms - -[0m
+2025-06-06 18:15:51 [INFO]: Request: GET /pix/logos/favicon-16x16.png from ::1
+2025-06-06 18:15:51 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:15:51 [INFO]: Response: 304 undefined - 0ms
+2025-06-06 18:15:51 [INFO]: [0mGET /pix/logos/favicon-16x16.png [36m304[0m 0.445 ms - -[0m
+2025-06-06 18:15:52 [INFO]: Request: GET / from ::1
+2025-06-06 18:15:52 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:15:52 [INFO]: Response: 304 undefined - 1ms
+2025-06-06 18:15:52 [INFO]: [0mGET / [36m304[0m 1.748 ms - -[0m
+2025-06-06 18:15:52 [INFO]: Request: GET /.well-known/appspecific/com.chrome.devtools.json from ::1
+2025-06-06 18:15:52 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:15:52 [INFO]: Response: 304 undefined - 17ms
+2025-06-06 18:15:52 [INFO]: [0mGET /.well-known/appspecific/com.chrome.devtools.json [36m304[0m 16.827 ms - -[0m
+2025-06-06 18:15:52 [INFO]: Request: GET /assets/index-BJJjQqHm.js from ::1
+2025-06-06 18:15:52 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:15:52 [INFO]: Response: 304 undefined - 2ms
+2025-06-06 18:15:52 [INFO]: [0mGET /assets/index-BJJjQqHm.js [36m304[0m 3.246 ms - -[0m
+2025-06-06 18:15:52 [INFO]: Request: GET /assets/index-D9_G3fTA.css from ::1
+2025-06-06 18:15:52 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:15:52 [INFO]: Response: 304 undefined - 1ms
+2025-06-06 18:15:52 [INFO]: [0mGET /assets/index-D9_G3fTA.css [36m304[0m 1.273 ms - -[0m
+2025-06-06 18:15:52 [INFO]: Request: GET /pix/logos/elilogo.png from ::1
+2025-06-06 18:15:52 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:15:52 [INFO]: Response: 304 undefined - 1ms
+2025-06-06 18:15:52 [INFO]: [0mGET /pix/logos/elilogo.png [36m304[0m 0.970 ms - -[0m
+2025-06-06 18:15:52 [INFO]: Request: GET /pix/logos/favicon32.png from ::1
+2025-06-06 18:15:52 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:15:52 [INFO]: Response: 304 undefined - 1ms
+2025-06-06 18:15:52 [INFO]: [0mGET /pix/logos/favicon32.png [36m304[0m 1.645 ms - -[0m
+2025-06-06 18:15:52 [INFO]: Request: GET /pix/logos/favicon-16x16.png from ::1
+2025-06-06 18:15:52 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:15:52 [INFO]: Response: 304 undefined - 1ms
+2025-06-06 18:15:52 [INFO]: [0mGET /pix/logos/favicon-16x16.png [36m304[0m 0.517 ms - -[0m
+2025-06-06 18:15:53 [INFO]: Request: GET / from ::1
+2025-06-06 18:15:53 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:15:53 [INFO]: Response: 200 OK - 4ms
+2025-06-06 18:15:53 [INFO]: [0mGET / [32m200[0m 2.659 ms - -[0m
+2025-06-06 18:15:53 [INFO]: Request: GET /.well-known/appspecific/com.chrome.devtools.json from ::1
+2025-06-06 18:15:53 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:15:53 [INFO]: Response: 304 undefined - 8ms
+2025-06-06 18:15:53 [INFO]: [0mGET /.well-known/appspecific/com.chrome.devtools.json [36m304[0m 9.179 ms - -[0m
+2025-06-06 18:15:53 [INFO]: Request: GET /assets/index-D9_G3fTA.css from ::1
+2025-06-06 18:15:53 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:15:53 [INFO]: Request: GET /assets/index-BJJjQqHm.js from ::1
+2025-06-06 18:15:53 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:15:53 [INFO]: Response: 200 OK - 15ms
+2025-06-06 18:15:53 [INFO]: Response: 200 OK - 4ms
+2025-06-06 18:15:53 [INFO]: [0mGET /assets/index-D9_G3fTA.css [32m200[0m 15.425 ms - -[0m
+2025-06-06 18:15:53 [INFO]: [0mGET /assets/index-BJJjQqHm.js [32m200[0m 3.470 ms - -[0m
+2025-06-06 18:15:53 [INFO]: Request: GET /pix/logos/elilogo.png from ::1
+2025-06-06 18:15:53 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:15:53 [INFO]: Response: 200 OK - 2ms
+2025-06-06 18:15:53 [INFO]: [0mGET /pix/logos/elilogo.png [32m200[0m 0.732 ms - -[0m
+2025-06-06 18:15:53 [INFO]: Request: GET /pix/logos/favicon32.png from ::1
+2025-06-06 18:15:53 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:15:53 [INFO]: Response: 304 undefined - 1ms
+2025-06-06 18:15:53 [INFO]: [0mGET /pix/logos/favicon32.png [36m304[0m 0.530 ms - -[0m
+2025-06-06 18:15:53 [INFO]: Request: GET /pix/logos/favicon-16x16.png from ::1
+2025-06-06 18:15:53 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:15:53 [INFO]: Response: 304 undefined - 0ms
+2025-06-06 18:15:53 [INFO]: [0mGET /pix/logos/favicon-16x16.png [36m304[0m 0.333 ms - -[0m
+2025-06-06 18:17:14 [INFO]: Server running on port 3000
+2025-06-06 18:17:14 [INFO]: Node.js version: v20.17.0
+2025-06-06 18:18:32 [INFO]: Server running on port 3000
+2025-06-06 18:18:32 [INFO]: Node.js version: v20.17.0
+2025-06-06 18:19:06 [INFO]: Request: GET / from ::1
+2025-06-06 18:19:06 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:19:06 [INFO]: Response: 304 undefined - 3ms
+2025-06-06 18:19:06 [INFO]: [0mGET / [36m304[0m 3.128 ms - -[0m
+2025-06-06 18:19:06 [INFO]: Request: GET /assets/index-D9_G3fTA.css from ::1
+2025-06-06 18:19:06 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:19:06 [INFO]: Response: 404 Not Found - 7ms
+2025-06-06 18:19:06 [INFO]: [0mGET /assets/index-D9_G3fTA.css [33m404[0m 8.286 ms - 164[0m
+2025-06-06 18:19:06 [INFO]: Request: GET /assets/index-BJJjQqHm.js from ::1
+2025-06-06 18:19:06 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:19:06 [INFO]: Response: 404 Not Found - 4ms
+2025-06-06 18:19:06 [INFO]: [0mGET /assets/index-BJJjQqHm.js [33m404[0m 6.094 ms - 163[0m
+2025-06-06 18:19:07 [INFO]: Request: GET /pix/logos/elilogo.png from ::1
+2025-06-06 18:19:07 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:19:07 [INFO]: Response: 404 Not Found - 0ms
+2025-06-06 18:19:07 [INFO]: [0mGET /pix/logos/elilogo.png [33m404[0m 0.888 ms - 160[0m
+2025-06-06 18:19:07 [INFO]: Request: GET /pix/logos/favicon32.png from ::1
+2025-06-06 18:19:07 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:19:07 [INFO]: Response: 404 Not Found - 0ms
+2025-06-06 18:19:07 [INFO]: [0mGET /pix/logos/favicon32.png [33m404[0m 0.822 ms - 162[0m
+2025-06-06 18:19:07 [INFO]: Request: GET /pix/logos/favicon-16x16.png from ::1
+2025-06-06 18:19:07 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:19:07 [INFO]: Response: 404 Not Found - 0ms
+2025-06-06 18:19:07 [INFO]: [0mGET /pix/logos/favicon-16x16.png [33m404[0m 0.366 ms - 166[0m
+2025-06-06 18:19:10 [INFO]: Request: GET / from ::1
+2025-06-06 18:19:10 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:19:10 [INFO]: Response: 304 undefined - 1ms
+2025-06-06 18:19:10 [INFO]: [0mGET / [36m304[0m 1.276 ms - -[0m
+2025-06-06 18:19:10 [INFO]: Request: GET /assets/index-BJJjQqHm.js from ::1
+2025-06-06 18:19:10 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:19:10 [INFO]: Response: 404 Not Found - 0ms
+2025-06-06 18:19:10 [INFO]: [0mGET /assets/index-BJJjQqHm.js [33m404[0m 1.070 ms - 163[0m
+2025-06-06 18:19:10 [INFO]: Request: GET /assets/index-D9_G3fTA.css from ::1
+2025-06-06 18:19:10 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:19:10 [INFO]: Response: 404 Not Found - 0ms
+2025-06-06 18:19:10 [INFO]: [0mGET /assets/index-D9_G3fTA.css [33m404[0m 0.491 ms - 164[0m
+2025-06-06 18:19:10 [INFO]: Request: GET / from ::1
+2025-06-06 18:19:10 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:19:10 [INFO]: Response: 304 undefined - 2ms
+2025-06-06 18:19:10 [INFO]: [0mGET / [36m304[0m 2.193 ms - -[0m
+2025-06-06 18:19:10 [INFO]: Request: GET /assets/index-BJJjQqHm.js from ::1
+2025-06-06 18:19:10 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:19:10 [INFO]: Response: 404 Not Found - 1ms
+2025-06-06 18:19:10 [INFO]: [0mGET /assets/index-BJJjQqHm.js [33m404[0m 0.881 ms - 163[0m
+2025-06-06 18:19:10 [INFO]: Request: GET /assets/index-D9_G3fTA.css from ::1
+2025-06-06 18:19:10 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:19:10 [INFO]: Response: 404 Not Found - 0ms
+2025-06-06 18:19:10 [INFO]: [0mGET /assets/index-D9_G3fTA.css [33m404[0m 0.289 ms - 164[0m
+2025-06-06 18:20:05 [INFO]: Server running on port 3000
+2025-06-06 18:20:05 [INFO]: Node.js version: v20.17.0
+2025-06-06 18:24:07 [INFO]: Server running on port 3000
+2025-06-06 18:24:07 [INFO]: Node.js version: v20.17.0
+2025-06-06 18:24:13 [INFO]: Request: GET / from ::1
+2025-06-06 18:24:13 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:24:13 [INFO]: Response: 304 undefined - 2ms
+2025-06-06 18:24:13 [INFO]: [0mGET / [36m304[0m 3.038 ms - -[0m
+2025-06-06 18:24:13 [INFO]: Request: GET /assets/index-BJJjQqHm.js from ::1
+2025-06-06 18:24:13 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:24:13 [INFO]: Request: GET /assets/index-D9_G3fTA.css from ::1
+2025-06-06 18:24:13 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:24:13 [INFO]: Response: 200 OK - 20ms
+2025-06-06 18:24:13 [INFO]: Response: 200 OK - 19ms
+2025-06-06 18:24:13 [INFO]: [0mGET /assets/index-BJJjQqHm.js [32m200[0m 8.923 ms - -[0m
+2025-06-06 18:24:13 [INFO]: [0mGET /assets/index-D9_G3fTA.css [32m200[0m 6.585 ms - -[0m
+2025-06-06 18:24:13 [INFO]: Request: GET /pix/logos/eliLogo192x192.png from ::1
+2025-06-06 18:24:13 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:24:13 [INFO]: Request: GET /pix/eli/eli_portrait.png from ::1
+2025-06-06 18:24:13 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:24:13 [INFO]: Response: 200 OK - 13ms
+2025-06-06 18:24:13 [INFO]: [0mGET /pix/logos/eliLogo192x192.png [32m200[0m 12.606 ms - 3418[0m
+2025-06-06 18:24:13 [INFO]: Request: GET /assets/fa-brands-400-D_cYUPeE.woff2 from ::1
+2025-06-06 18:24:13 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:24:13 [INFO]: Request: GET /assets/fa-solid-900-CTAAxXor.woff2 from ::1
+2025-06-06 18:24:13 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-06 18:24:13 [INFO]: Response: 200 OK - 16ms
+2025-06-06 18:24:13 [INFO]: [0mGET /pix/eli/eli_portrait.png [32m200[0m 14.296 ms - 94382[0m
+2025-06-06 18:24:13 [INFO]: Response: 200 OK - 5ms
+2025-06-06 18:24:13 [INFO]: [0mGET /assets/fa-brands-400-D_cYUPeE.woff2 [32m200[0m 4.728 ms - 118684[0m
+2025-06-06 18:24:13 [INFO]: Response: 200 OK - 4ms
+2025-06-06 18:24:13 [INFO]: [0mGET /assets/fa-solid-900-CTAAxXor.woff2 [32m200[0m 3.288 ms - 158220[0m
+2025-06-06 20:39:40 [INFO]: Server running on port 3000
+2025-06-06 20:39:40 [INFO]: Node.js version: v20.17.0

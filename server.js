@@ -8,7 +8,7 @@ const {logger} = require('./config/backoffice.js/logger.js');
 // 3. Importations des modules tiers
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors');
+// const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const useragent = require('express-useragent');
@@ -114,28 +114,28 @@ const allowedOrigins = [
 ];
  
 
-const corsOptions = {
-	origin: (origin, callback) => {
-		console.log('☘️ Origine de la requête =>', origin);
-		// Autoriser les requêtes sans origine (par exemple Postman)
-		if (!origin) return callback(null, true);
+// const corsOptions = {
+// 	origin: (origin, callback) => {
+// 		console.log('☘️ Origine de la requête =>', origin);
+// 		// Autoriser les requêtes sans origine (par exemple Postman)
+// 		if (!origin) return callback(null, true);
 
-		// Valider l'origine par rapport à la liste autorisée
-		const allowed = allowedOrigins.some((allowedOrigin) =>
-			allowedOrigin instanceof RegExp
-				? allowedOrigin.test(origin)
-				: allowedOrigin === origin
-		);
-		return allowed
-			? callback(null, origin)
-			: callback(new Error('Not allowed by CORS'));
-	},
-	methods: ['GET', 'POST'],
-	credentials: true,
-	optionsSuccessStatus: 200,
-};
+// 		// Valider l'origine par rapport à la liste autorisée
+// 		const allowed = allowedOrigins.some((allowedOrigin) =>
+// 			allowedOrigin instanceof RegExp
+// 				? allowedOrigin.test(origin)
+// 				: allowedOrigin === origin
+// 		);
+// 		return allowed
+// 			? callback(null, origin)
+// 			: callback(new Error('Not allowed by CORS'));
+// 	},
+// 	methods: ['GET', 'POST'],
+// 	credentials: true,
+// 	optionsSuccessStatus: 200,
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 // 8. Parsers pour le corps des requêtes, les cookies et la détection du User-Agent
 app.use(bodyParser.json());
@@ -146,13 +146,7 @@ app.use(useragent.express());
 // 9. Application des configurations globales depuis setupApp (par exemple, gestion de la sécurité ou d'autres middlewares custom)
 setupApp(app);
 
-// 10. Servir les fichiers statiques (assets, pages HTML, etc.)
-app.use(express.static(path.join(__dirname, '..', 'views')));
 
-// 11. Définir la route d'accueil
-app.get('/', (req, res) => {
-	res.sendFile(path.join(__dirname, 'views', 'index.html'));
-});
 
 // 12. Chargement et utilisation des routes centralisées
 const routes = require('./controllers/routesControl');
@@ -173,13 +167,39 @@ app.use((err, req, res, next) => {
 	});
 });
 
+
+console.log('🚀 --------------------------------------------------------🚀');
+console.log('🚀 ~ server.js:178 ~ app.get ~ __dirname  ==> ', __dirname);
+console.log('🚀 --------------------------------------------------------🚀');
+
+const urlEntryPoint = __dirname + '/dist/index.html';
+
+console.log('🚀 ------------------------------------------------------🚀')
+console.log('🚀 ~ server.js:172 ~ urlEntryPoint  ==> ', urlEntryPoint)
+console.log('🚀 ------------------------------------------------------🚀')
+// Configuration des fichiers statiques
+app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'dist')));
+
 // Routes fallback pour le front-end (SPA)
 app.get('/', (req, res) => {
-	res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+	res.sendFile(path.join(urlEntryPoint));
 });
-app.get('/*', (req, res) => {
-	res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+// app.get('/*', (req, res) => {
+// 	res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+// });
+
+
+
+
+// 10. Servir les fichiers statiques (assets, pages HTML, etc.)
+// app.use(express.static(path.join(__dirname, '..', 'views')));
+
+// 11. Définir la route d'accueil
+// app.get('/', (req, res) => {
+// 	res.sendFile(path.join(__dirname, 'views', 'index.html'));
+// });
+
 
 // 15. Démarrage du serveur
 const PORT = process.env.PORT || 3000;
