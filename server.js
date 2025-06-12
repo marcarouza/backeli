@@ -17,7 +17,7 @@ const listEndpoints = require('express-list-endpoints');
 
 const session = require('express-session');
 
-);
+
 
 // app.use(
 // 	session({
