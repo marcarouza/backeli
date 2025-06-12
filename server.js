@@ -15,6 +15,26 @@ const useragent = require('express-useragent');
 const path = require('path');
 const listEndpoints = require('express-list-endpoints');
 
+const session = require('express-session');
+
+app.use(
+	session({
+		secret: process.env.JET, // à changer dans votre environnement de production
+		resave: false,
+		saveUninitialized: false,
+		cookie: {
+			maxAge: 1000 * 60 * 60 * 24, // 24 heures
+		},
+		
+		
+	}),
+	console.log('🚀 ~ server.js:32 ~ session  ==> ', session)
+
+);
+
+
+
+
 // 4. Initialisation de l'application Express
 const app = express();
 app.use((req, res, next) => {
@@ -75,6 +95,7 @@ app.use((req, res, next) => {
 	res.setHeader('Access-Control-Allow-Credentials', true);
 	next();
 });
+
 
 
 // 5. Connexion à MongoDB
