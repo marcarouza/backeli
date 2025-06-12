@@ -40,16 +40,6 @@ console.log('🚀 ~ server.js:37 ~ session  ==> ', session)
 ));
 
 
-const session = require('express-session');
-// puis de l'utiliser avec sa configuration en l'appelant :
-app.use(
-	session({
-		secret: 'votre_secret_complexe',
-		resave: false,
-		saveUninitialized: false,
-		cookie: {maxAge: 1000 * 60 * 60 * 24},
-	})
-);
 
 
  app.get('/api/session', (req, res) => {
@@ -235,20 +225,6 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.get('/', (req, res) => {
 	res.sendFile(path.join(urlEntryPoint));
 });
-// app.get('/*', (req, res) => {
-// 	res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-// });
-
-
-
-
-// 10. Servir les fichiers statiques (assets, pages HTML, etc.)
-// app.use(express.static(path.join(__dirname, '..', 'views')));
-
-// 11. Définir la route d'accueil
-// app.get('/', (req, res) => {
-// 	res.sendFile(path.join(__dirname, 'views', 'index.html'));
-// });
 
 
 // 15. Démarrage du serveur
