@@ -27,13 +27,32 @@ app.use(session({
 	resave: false,
 	saveUninitialized: false,
 	cookie: {
-	  maxAge: 1000 * 60 * 60 * 24, // Le cookie expire après 24 heures
-	  secure: process.env.NODE_ENV === 'production', // en production, utilisez HTTPS
-	  httpOnly: true // Empêche l'accès via JavaScript côté client
+		maxAge: 1000 * 60 * 60 * 24, // Le cookie expire après 24 heures
+		secure: process.env.NODE_ENV === 'production', // en production, utilisez HTTPS
+		httpOnly: true // Empêche l'accès via JavaScript côté client
 	}
- }));
+	
+},
 
- app.get('/', (req, res) => {
+console.log('🚀 ~ server.js:37 ~ session  ==> ', session)
+
+
+));
+
+
+const session = require('express-session');
+// puis de l'utiliser avec sa configuration en l'appelant :
+app.use(
+	session({
+		secret: 'votre_secret_complexe',
+		resave: false,
+		saveUninitialized: false,
+		cookie: {maxAge: 1000 * 60 * 60 * 24},
+	})
+);
+
+
+ app.get('/api/session', (req, res) => {
 	// Exemple d'utilisation de la session
 	if (req.session.views) {
 	  req.session.views++;
@@ -46,19 +65,6 @@ app.use(session({
 
 
 
-
-
-app.use(
-	session({
-		secret: process.env.JET, // à changer dans votre environnement de production
-		resave: false,
-		saveUninitialized: false,
-		cookie: {
-			maxAge: 1000 * 60 * 60 * 24, // 24 heures
-		}
-	}),
-	console.log('🚀 ~ server.js:32 ~ session  ==> ', session)
-)
 
 app.use((req, res, next) => {
 	console.log('❤️ En-têtes de la requête :', req.headers);
