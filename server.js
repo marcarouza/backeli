@@ -58,6 +58,7 @@ app.use(
 		}
 	}),
 	console.log('🚀 ~ server.js:32 ~ session  ==> ', session)
+)
 
 app.use((req, res, next) => {
 	console.log('❤️ En-têtes de la requête :', req.headers);
