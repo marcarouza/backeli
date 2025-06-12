@@ -17,6 +17,27 @@ const listEndpoints = require('express-list-endpoints');
 
 const session = require('express-session');
 
+);
+
+// app.use(
+// 	session({
+// 		secret: 'votre_session_secret_à_changer',
+// 		resave: false,
+// 		saveUninitialized: false,
+// 		cookie: {
+// 			maxAge: 1000 * 60 * 60 * 24, // 24h
+// 			secure: process.env.NODE_ENV === 'production', // cookie sécurisé en production
+// 		},
+// 	})
+// );
+
+
+
+// 4. Initialisation de l'application Express
+const app = express();
+
+
+
 app.use(
 	session({
 		secret: process.env.JET, // à changer dans votre environnement de production
@@ -24,19 +45,10 @@ app.use(
 		saveUninitialized: false,
 		cookie: {
 			maxAge: 1000 * 60 * 60 * 24, // 24 heures
-		},
-		
-		
+		}
 	}),
 	console.log('🚀 ~ server.js:32 ~ session  ==> ', session)
 
-);
-
-
-
-
-// 4. Initialisation de l'application Express
-const app = express();
 app.use((req, res, next) => {
 	console.log('❤️ En-têtes de la requête :', req.headers);
 	next();
