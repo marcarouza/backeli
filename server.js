@@ -19,22 +19,32 @@ const session = require('express-session');
 
 
 
-// app.use(
-// 	session({
-// 		secret: 'votre_session_secret_à_changer',
-// 		resave: false,
-// 		saveUninitialized: false,
-// 		cookie: {
-// 			maxAge: 1000 * 60 * 60 * 24, // 24h
-// 			secure: process.env.NODE_ENV === 'production', // cookie sécurisé en production
-// 		},
-// 	})
-// );
-
-
-
-// 4. Initialisation de l'application Express
 const app = express();
+
+// Configuration de express-session
+app.use(session({
+	secret: process.env.JET,
+	resave: false,
+	saveUninitialized: false,
+	cookie: {
+	  maxAge: 1000 * 60 * 60 * 24, // Le cookie expire après 24 heures
+	  secure: process.env.NODE_ENV === 'production', // en production, utilisez HTTPS
+	  httpOnly: true // Empêche l'accès via JavaScript côté client
+	}
+ }));
+
+ app.get('/', (req, res) => {
+	// Exemple d'utilisation de la session
+	if (req.session.views) {
+	  req.session.views++;
+	  res.send(`Nombre de vues : ${req.session.views}`);
+	} else {
+	  req.session.views = 1;
+	  res.send('Bienvenue, cette est votre première visite !');
+	}
+ });
+
+
 
 
 
