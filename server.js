@@ -53,7 +53,9 @@ console.log('🚀 ~ server.js:37 ~ session  ==> ', session);
 		req.session.views = 1;
 console.log('🚀 ~ server.js:37 ~ session  ==> ', session);
 		
-	  res.send('Bienvenue, cette est votre première visite !');
+		res.send('Bienvenue, cette est votre première visite !');
+console.log('🚀 ~ server.js:37 ~ session  ==> ', session);
+		
 	}
  });
 
