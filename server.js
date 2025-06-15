@@ -8,7 +8,7 @@ const {logger} = require('./config/backoffice.js/logger.js');
 // 3. Importations des modules tiers
 const express = require('express');
 const mongoose = require('mongoose');
-// const cors = require('cors');
+const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const useragent = require('express-useragent');
@@ -159,28 +159,28 @@ const allowedOrigins = [
 ];
  
 
-// const corsOptions = {
-// 	origin: (origin, callback) => {
-// 		console.log('☘️ Origine de la requête =>', origin);
-// 		// Autoriser les requêtes sans origine (par exemple Postman)
-// 		if (!origin) return callback(null, true);
+const corsOptions = {
+	origin: (origin, callback) => {
+		console.log('☘️ Origine de la requête =>', origin);
+		// Autoriser les requêtes sans origine (par exemple Postman)
+		if (!origin) return callback(null, true);
 
-// 		// Valider l'origine par rapport à la liste autorisée
-// 		const allowed = allowedOrigins.some((allowedOrigin) =>
-// 			allowedOrigin instanceof RegExp
-// 				? allowedOrigin.test(origin)
-// 				: allowedOrigin === origin
-// 		);
-// 		return allowed
-// 			? callback(null, origin)
-// 			: callback(new Error('Not allowed by CORS'));
-// 	},
-// 	methods: ['GET', 'POST'],
-// 	credentials: true,
-// 	optionsSuccessStatus: 200,
-// };
+		// Valider l'origine par rapport à la liste autorisée
+		const allowed = allowedOrigins.some((allowedOrigin) =>
+			allowedOrigin instanceof RegExp
+				? allowedOrigin.test(origin)
+				: allowedOrigin === origin
+		);
+		return allowed
+			? callback(null, origin)
+			: callback(new Error('Not allowed by CORS'));
+	},
+	methods: ['GET', 'POST'],
+	credentials: true,
+	optionsSuccessStatus: 200,
+};
 
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
 // 8. Parsers pour le corps des requêtes, les cookies et la détection du User-Agent
 app.use(bodyParser.json());
