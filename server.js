@@ -159,26 +159,34 @@ const allowedOrigins = [
 ];
  
 
-const corsOptions = {
-	origin: (origin, callback) => {
-		console.log('☘️ Origine de la requête =>', origin);
-		// Autoriser les requêtes sans origine (par exemple Postman)
-		if (!origin) return callback(null, true);
+// const corsOptions = {
+// 	origin: (origin, callback) => {
+// 		console.log('☘️ Origine de la requête =>', origin);
+// 		// Autoriser les requêtes sans origine (par exemple Postman)
+// 		if (!origin) return callback(null, true);
 
-		// Valider l'origine par rapport à la liste autorisée
-		const allowed = allowedOrigins.some((allowedOrigin) =>
-			allowedOrigin instanceof RegExp
-				? allowedOrigin.test(origin)
-				: allowedOrigin === origin
-		);
-		return allowed
-			? callback(null, origin)
-			: callback(new Error('Not allowed by CORS'));
-	},
-	methods: ['GET', 'POST'],
-	credentials: true,
-	optionsSuccessStatus: 200,
+// 		// Valider l'origine par rapport à la liste autorisée
+// 		const allowed = allowedOrigins.some((allowedOrigin) =>
+// 			allowedOrigin instanceof RegExp
+// 				? allowedOrigin.test(origin)
+// 				: allowedOrigin === origin
+// 		);
+// 		return allowed
+// 			? callback(null, origin)
+// 			: callback(new Error('Not allowed by CORS'));
+// 	},
+// 	methods: ['GET', 'POST'],
+// 	credentials: true,
+// 	optionsSuccessStatus: 200,
+// };
+
+const corsOptions = {
+	origin: '*', // Permet toutes les origines
+	methods: ['GET', 'POST'], // Méthodes autorisées
+	credentials: true, // Si vous devez gérer des cookies
+	optionsSuccessStatus: 200, // Statut de succès pour les requêtes OPTIONS
 };
+
 
 app.use(cors(corsOptions));
 
