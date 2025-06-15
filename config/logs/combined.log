@@ -340,3 +340,229 @@
 2025-06-06 18:24:13 [INFO]: [0mGET /assets/fa-solid-900-CTAAxXor.woff2 [32m200[0m 3.288 ms - 158220[0m
 2025-06-06 20:39:40 [INFO]: Server running on port 3000
 2025-06-06 20:39:40 [INFO]: Node.js version: v20.17.0
+2025-06-12 20:05:06 [INFO]: Server running on port 3000
+2025-06-12 20:05:06 [INFO]: Node.js version: v20.17.0
+2025-06-12 20:05:24 [INFO]: Request: GET / from ::1
+2025-06-12 20:05:24 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:05:24 [INFO]: Response: 200 OK - 8ms
+2025-06-12 20:05:25 [INFO]: [0mGET / [32m200[0m 6.570 ms - -[0m
+2025-06-12 20:05:25 [INFO]: Request: GET /assets/index-CnlZsmOo.js from ::1
+2025-06-12 20:05:25 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:05:25 [INFO]: Request: GET /assets/index-DvYPm2ql.css from ::1
+2025-06-12 20:05:25 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:05:25 [INFO]: Response: 200 OK - 11ms
+2025-06-12 20:05:25 [INFO]: [0mGET /assets/index-CnlZsmOo.js [32m200[0m 3.889 ms - -[0m
+2025-06-12 20:05:25 [INFO]: Response: 200 OK - 20ms
+2025-06-12 20:05:25 [INFO]: [0mGET /assets/index-DvYPm2ql.css [32m200[0m 2.773 ms - -[0m
+2025-06-12 20:05:30 [INFO]: Request: GET /api/checkUser from ::1
+2025-06-12 20:05:30 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:05:30 [INFO]: Response: 304 undefined - 2ms
+2025-06-12 20:05:30 [INFO]: [0mGET /api/checkUser [36m304[0m 3.544 ms - -[0m
+2025-06-12 20:05:30 [INFO]: Request: GET /api/checkUser from ::1
+2025-06-12 20:05:30 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:05:30 [INFO]: Response: 304 undefined - 1ms
+2025-06-12 20:05:30 [INFO]: [0mGET /api/checkUser [36m304[0m 1.252 ms - -[0m
+2025-06-12 20:05:30 [INFO]: Request: GET /pix/logos/eliLogo192x192.png from ::1
+2025-06-12 20:05:30 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:05:30 [INFO]: Request: GET /pix/eli/eli_portrait.png from ::1
+2025-06-12 20:05:30 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:05:30 [INFO]: Request: GET /assets/fa-brands-400-D_cYUPeE.woff2 from ::1
+2025-06-12 20:05:30 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:05:30 [INFO]: Request: GET /assets/fa-solid-900-CTAAxXor.woff2 from ::1
+2025-06-12 20:05:30 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:05:30 [INFO]: Response: 200 OK - 64ms
+2025-06-12 20:05:30 [INFO]: [0mGET /pix/logos/eliLogo192x192.png [32m200[0m 64.177 ms - 3418[0m
+2025-06-12 20:05:30 [INFO]: Response: 200 OK - 46ms
+2025-06-12 20:05:30 [INFO]: [0mGET /pix/eli/eli_portrait.png [32m200[0m 44.214 ms - 94382[0m
+2025-06-12 20:05:30 [INFO]: Response: 200 OK - 5ms
+2025-06-12 20:05:30 [INFO]: [0mGET /assets/fa-brands-400-D_cYUPeE.woff2 [32m200[0m 3.055 ms - 118684[0m
+2025-06-12 20:05:30 [INFO]: Response: 200 OK - 11ms
+2025-06-12 20:05:30 [INFO]: [0mGET /assets/fa-solid-900-CTAAxXor.woff2 [32m200[0m 3.723 ms - 158220[0m
+2025-06-12 20:08:16 [INFO]: Server running on port 3000
+2025-06-12 20:08:16 [INFO]: Node.js version: v20.17.0
+2025-06-12 20:08:19 [INFO]: Request: GET / from ::1
+2025-06-12 20:08:19 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:08:19 [INFO]: Response: 304 undefined - 5ms
+2025-06-12 20:08:19 [INFO]: [0mGET / [36m304[0m 6.197 ms - -[0m
+2025-06-12 20:08:19 [INFO]: Request: GET /assets/index-CnlZsmOo.js from ::1
+2025-06-12 20:08:19 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:08:19 [INFO]: Request: GET /assets/index-DvYPm2ql.css from ::1
+2025-06-12 20:08:19 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:08:19 [INFO]: Response: 304 undefined - 10ms
+2025-06-12 20:08:19 [INFO]: [0mGET /assets/index-CnlZsmOo.js [36m304[0m 10.852 ms - -[0m
+2025-06-12 20:08:19 [INFO]: Response: 304 undefined - 2ms
+2025-06-12 20:08:19 [INFO]: [0mGET /assets/index-DvYPm2ql.css [36m304[0m 1.968 ms - -[0m
+2025-06-12 20:08:19 [INFO]: Request: GET /api/checkUser from ::1
+2025-06-12 20:08:19 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:08:19 [INFO]: Response: 304 undefined - 1ms
+2025-06-12 20:08:19 [INFO]: [0mGET /api/checkUser [36m304[0m 1.428 ms - -[0m
+2025-06-12 20:08:19 [INFO]: Request: GET /api/checkUser from ::1
+2025-06-12 20:08:19 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:08:19 [INFO]: Response: 304 undefined - 1ms
+2025-06-12 20:08:19 [INFO]: [0mGET /api/checkUser [36m304[0m 0.711 ms - -[0m
+2025-06-12 20:08:19 [INFO]: Request: GET /pix/logos/eliLogo192x192.png from ::1
+2025-06-12 20:08:19 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:08:19 [INFO]: Request: GET /pix/eli/eli_portrait.png from ::1
+2025-06-12 20:08:19 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:08:19 [INFO]: Response: 304 undefined - 1ms
+2025-06-12 20:08:19 [INFO]: [0mGET /pix/logos/eliLogo192x192.png [36m304[0m 2.080 ms - -[0m
+2025-06-12 20:08:19 [INFO]: Response: 304 undefined - 3ms
+2025-06-12 20:08:19 [INFO]: [0mGET /pix/eli/eli_portrait.png [36m304[0m 3.132 ms - -[0m
+2025-06-12 20:08:19 [INFO]: Request: GET /assets/fa-brands-400-D_cYUPeE.woff2 from ::1
+2025-06-12 20:08:19 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:08:19 [INFO]: Request: GET /assets/fa-solid-900-CTAAxXor.woff2 from ::1
+2025-06-12 20:08:19 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:08:19 [INFO]: Response: 304 undefined - 5ms
+2025-06-12 20:08:19 [INFO]: [0mGET /assets/fa-brands-400-D_cYUPeE.woff2 [36m304[0m 5.024 ms - -[0m
+2025-06-12 20:08:19 [INFO]: Response: 304 undefined - 4ms
+2025-06-12 20:08:19 [INFO]: [0mGET /assets/fa-solid-900-CTAAxXor.woff2 [36m304[0m 4.912 ms - -[0m
+2025-06-12 20:08:51 [INFO]: Server running on port 3000
+2025-06-12 20:08:51 [INFO]: Node.js version: v20.17.0
+2025-06-12 20:09:37 [INFO]: Request: GET / from ::1
+2025-06-12 20:09:37 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:09:37 [INFO]: Response: 304 undefined - 1ms
+2025-06-12 20:09:37 [INFO]: [0mGET / [36m304[0m 2.354 ms - -[0m
+2025-06-12 20:09:37 [INFO]: Request: GET /assets/index-DvYPm2ql.css from ::1
+2025-06-12 20:09:37 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:09:37 [INFO]: Response: 304 undefined - 6ms
+2025-06-12 20:09:37 [INFO]: Request: GET /assets/index-CnlZsmOo.js from ::1
+2025-06-12 20:09:37 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:09:37 [INFO]: [0mGET /assets/index-DvYPm2ql.css [36m304[0m 6.105 ms - -[0m
+2025-06-12 20:09:37 [INFO]: Response: 304 undefined - 7ms
+2025-06-12 20:09:37 [INFO]: [0mGET /assets/index-CnlZsmOo.js [36m304[0m 7.128 ms - -[0m
+2025-06-12 20:09:43 [INFO]: Request: GET /api/checkUser from ::1
+2025-06-12 20:09:43 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:09:43 [INFO]: Response: 304 undefined - 1ms
+2025-06-12 20:09:43 [INFO]: [0mGET /api/checkUser [36m304[0m 1.606 ms - -[0m
+2025-06-12 20:09:43 [INFO]: Request: GET /pix/logos/eliLogo192x192.png from ::1
+2025-06-12 20:09:43 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:09:43 [INFO]: Request: GET /api/checkUser from ::1
+2025-06-12 20:09:43 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:09:43 [INFO]: Response: 304 undefined - 0ms
+2025-06-12 20:09:43 [INFO]: [0mGET /api/checkUser [36m304[0m 0.666 ms - -[0m
+2025-06-12 20:09:43 [INFO]: Response: 304 undefined - 12ms
+2025-06-12 20:09:43 [INFO]: Request: GET /assets/fa-brands-400-D_cYUPeE.woff2 from ::1
+2025-06-12 20:09:43 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:09:43 [INFO]: [0mGET /pix/logos/eliLogo192x192.png [36m304[0m 12.894 ms - -[0m
+2025-06-12 20:09:43 [INFO]: Request: GET /pix/eli/eli_portrait.png from ::1
+2025-06-12 20:09:43 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:09:43 [INFO]: Response: 304 undefined - 6ms
+2025-06-12 20:09:43 [INFO]: Request: GET /assets/fa-solid-900-CTAAxXor.woff2 from ::1
+2025-06-12 20:09:43 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-12 20:09:43 [INFO]: [0mGET /assets/fa-brands-400-D_cYUPeE.woff2 [36m304[0m 6.405 ms - -[0m
+2025-06-12 20:09:43 [INFO]: Response: 304 undefined - 4ms
+2025-06-12 20:09:43 [INFO]: [0mGET /pix/eli/eli_portrait.png [36m304[0m 4.310 ms - -[0m
+2025-06-12 20:09:43 [INFO]: Response: 304 undefined - 2ms
+2025-06-12 20:09:43 [INFO]: [0mGET /assets/fa-solid-900-CTAAxXor.woff2 [36m304[0m 1.602 ms - -[0m
+2025-06-13 10:50:46 [INFO]: Request: GET / from ::1
+2025-06-13 10:50:46 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 10:50:46 [INFO]: Response: 304 undefined - 7ms
+2025-06-13 10:50:46 [INFO]: [0mGET / [36m304[0m 7.644 ms - -[0m
+2025-06-13 10:50:46 [INFO]: Request: GET /assets/index-DvYPm2ql.css from ::1
+2025-06-13 10:50:46 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 10:50:46 [INFO]: Request: GET /assets/index-CnlZsmOo.js from ::1
+2025-06-13 10:50:46 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 10:50:46 [INFO]: Response: 304 undefined - 4ms
+2025-06-13 10:50:46 [INFO]: Response: 304 undefined - 3ms
+2025-06-13 10:50:46 [INFO]: [0mGET /assets/index-DvYPm2ql.css [36m304[0m 4.245 ms - -[0m
+2025-06-13 10:50:46 [INFO]: [0mGET /assets/index-CnlZsmOo.js [36m304[0m 3.308 ms - -[0m
+2025-06-13 10:50:46 [INFO]: Request: GET /api/checkUser from ::1
+2025-06-13 10:50:46 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 10:50:46 [INFO]: Response: 304 undefined - 0ms
+2025-06-13 10:50:46 [INFO]: [0mGET /api/checkUser [36m304[0m 0.824 ms - -[0m
+2025-06-13 10:50:46 [INFO]: Request: GET /pix/logos/eliLogo192x192.png from ::1
+2025-06-13 10:50:46 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 10:50:46 [INFO]: Response: 304 undefined - 3ms
+2025-06-13 10:50:46 [INFO]: [0mGET /pix/logos/eliLogo192x192.png [36m304[0m 3.072 ms - -[0m
+2025-06-13 10:50:46 [INFO]: Request: GET /api/checkUser from ::1
+2025-06-13 10:50:46 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 10:50:46 [INFO]: Response: 304 undefined - 2ms
+2025-06-13 10:50:46 [INFO]: [0mGET /api/checkUser [36m304[0m 2.117 ms - -[0m
+2025-06-13 10:50:46 [INFO]: Request: GET /pix/eli/eli_portrait.png from ::1
+2025-06-13 10:50:46 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 10:50:46 [INFO]: Request: GET /assets/fa-brands-400-D_cYUPeE.woff2 from ::1
+2025-06-13 10:50:46 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 10:50:46 [INFO]: Request: GET /assets/fa-solid-900-CTAAxXor.woff2 from ::1
+2025-06-13 10:50:46 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 10:50:46 [INFO]: Response: 304 undefined - 4ms
+2025-06-13 10:50:46 [INFO]: Response: 304 undefined - 5ms
+2025-06-13 10:50:46 [INFO]: [0mGET /pix/eli/eli_portrait.png [36m304[0m 4.251 ms - -[0m
+2025-06-13 10:50:46 [INFO]: [0mGET /assets/fa-brands-400-D_cYUPeE.woff2 [36m304[0m 5.260 ms - -[0m
+2025-06-13 10:50:46 [INFO]: Response: 304 undefined - 4ms
+2025-06-13 10:50:46 [INFO]: [0mGET /assets/fa-solid-900-CTAAxXor.woff2 [36m304[0m 3.942 ms - -[0m
+2025-06-13 10:50:48 [INFO]: Request: GET / from ::1
+2025-06-13 10:50:48 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 10:50:48 [INFO]: Response: 304 undefined - 1ms
+2025-06-13 10:50:48 [INFO]: [0mGET / [36m304[0m 1.425 ms - -[0m
+2025-06-13 10:50:48 [INFO]: Request: GET /assets/index-CnlZsmOo.js from ::1
+2025-06-13 10:50:48 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 10:50:48 [INFO]: Response: 304 undefined - 1ms
+2025-06-13 10:50:48 [INFO]: [0mGET /assets/index-CnlZsmOo.js [36m304[0m 1.876 ms - -[0m
+2025-06-13 10:50:48 [INFO]: Request: GET /assets/index-DvYPm2ql.css from ::1
+2025-06-13 10:50:48 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 10:50:48 [INFO]: Response: 304 undefined - 1ms
+2025-06-13 10:50:48 [INFO]: [0mGET /assets/index-DvYPm2ql.css [36m304[0m 0.705 ms - -[0m
+2025-06-13 10:50:48 [INFO]: Request: GET /api/checkUser from ::1
+2025-06-13 10:50:48 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 10:50:48 [INFO]: Response: 304 undefined - 0ms
+2025-06-13 10:50:48 [INFO]: Request: GET /pix/logos/eliLogo192x192.png from ::1
+2025-06-13 10:50:48 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 10:50:48 [INFO]: [0mGET /api/checkUser [36m304[0m 0.643 ms - -[0m
+2025-06-13 10:50:48 [INFO]: Request: GET /pix/eli/eli_portrait.png from ::1
+2025-06-13 10:50:48 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 10:50:48 [INFO]: Request: GET /assets/fa-brands-400-D_cYUPeE.woff2 from ::1
+2025-06-13 10:50:48 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 10:50:48 [INFO]: Response: 304 undefined - 6ms
+2025-06-13 10:50:48 [INFO]: Request: GET /assets/fa-solid-900-CTAAxXor.woff2 from ::1
+2025-06-13 10:50:48 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 10:50:48 [INFO]: [0mGET /pix/logos/eliLogo192x192.png [36m304[0m 6.550 ms - -[0m
+2025-06-13 10:50:48 [INFO]: Response: 304 undefined - 6ms
+2025-06-13 10:50:48 [INFO]: Response: 304 undefined - 3ms
+2025-06-13 10:50:48 [INFO]: [0mGET /pix/eli/eli_portrait.png [36m304[0m 5.387 ms - -[0m
+2025-06-13 10:50:48 [INFO]: [0mGET /assets/fa-brands-400-D_cYUPeE.woff2 [36m304[0m 3.405 ms - -[0m
+2025-06-13 10:50:48 [INFO]: Request: GET /api/checkUser from ::1
+2025-06-13 10:50:48 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 10:50:48 [INFO]: Response: 304 undefined - 1ms
+2025-06-13 10:50:48 [INFO]: Response: 304 undefined - 4ms
+2025-06-13 10:50:48 [INFO]: [0mGET /api/checkUser [36m304[0m 1.098 ms - -[0m
+2025-06-13 10:50:48 [INFO]: [0mGET /assets/fa-solid-900-CTAAxXor.woff2 [36m304[0m 4.225 ms - -[0m
+2025-06-13 14:04:38 [INFO]: Request: GET / from ::1
+2025-06-13 14:04:38 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 14:04:38 [INFO]: Response: 200 OK - 14ms
+2025-06-13 14:04:38 [INFO]: [0mGET / [32m200[0m 8.924 ms - -[0m
+2025-06-13 14:04:39 [INFO]: Request: GET / from ::1
+2025-06-13 14:04:39 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 14:04:39 [INFO]: Response: 200 OK - 1ms
+2025-06-13 14:04:39 [INFO]: [0mGET / [32m200[0m 0.570 ms - -[0m
+2025-06-13 14:07:51 [INFO]: Request: GET / from ::1
+2025-06-13 14:07:51 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 14:07:51 [INFO]: Response: 200 OK - 2ms
+2025-06-13 14:07:51 [INFO]: [0mGET / [32m200[0m 1.223 ms - -[0m
+2025-06-13 14:10:06 [INFO]: Request: GET / from ::1
+2025-06-13 14:10:06 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 14:10:06 [INFO]: Response: 200 OK - 2ms
+2025-06-13 14:10:06 [INFO]: [0mGET / [32m200[0m 2.374 ms - -[0m
+2025-06-13 14:10:07 [INFO]: Request: GET / from ::1
+2025-06-13 14:10:07 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 14:10:07 [INFO]: Response: 200 OK - 2ms
+2025-06-13 14:10:07 [INFO]: [0mGET / [32m200[0m 1.295 ms - -[0m
+2025-06-13 14:14:18 [INFO]: Request: GET / from ::1
+2025-06-13 14:14:18 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 14:14:18 [INFO]: Response: 200 OK - 2ms
+2025-06-13 14:14:18 [INFO]: [0mGET / [32m200[0m 1.715 ms - -[0m
+2025-06-13 14:14:18 [INFO]: Request: GET / from ::1
+2025-06-13 14:14:18 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 14:14:18 [INFO]: Response: 200 OK - 0ms
+2025-06-13 14:14:18 [INFO]: [0mGET / [32m200[0m 0.458 ms - -[0m
+2025-06-13 14:14:19 [INFO]: Request: GET / from ::1
+2025-06-13 14:14:19 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 14:14:19 [INFO]: Response: 200 OK - 2ms
+2025-06-13 14:14:19 [INFO]: [0mGET / [32m200[0m 1.356 ms - -[0m
+2025-06-13 14:15:23 [INFO]: Request: GET / from ::1
+2025-06-13 14:15:23 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 14:15:23 [INFO]: Response: 200 OK - 4ms
+2025-06-13 14:15:23 [INFO]: [0mGET / [32m200[0m 2.648 ms - -[0m
+2025-06-13 14:15:24 [INFO]: Request: GET / from ::1
+2025-06-13 14:15:24 [DEBUG]: User agent: {"browser":"Chrome","version":"137.0.0.0","os":"OS X","platform":"Apple Mac","isMobile":false,"isDesktop":true}
+2025-06-13 14:15:24 [INFO]: Response: 200 OK - 2ms
+2025-06-13 14:15:24 [INFO]: [0mGET / [32m200[0m 1.801 ms - -[0m

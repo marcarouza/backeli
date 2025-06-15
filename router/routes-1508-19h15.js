@@ -38,7 +38,7 @@ router.route('/logOutApi').get(routesControl.logOutApi);
 
 //?? ---  ENVOI POST PAR MAIL DU MESSAGE CONTACT ----------------
 
-router.route('/contactFormPost').post(routesControl.contactForm_post);
+router.route('/api/contactFormPost').post(routesControl.contactForm_post);
 
 //?? ---  ENVOI PAR MAIL DE CONFIRMATION INSCRIPTION  ----------------
 

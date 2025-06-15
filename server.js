@@ -45,16 +45,15 @@ app.use(session({
 	// Exemple d'utilisation de la session
 	if (req.session.views) {
 		req.session.views++;
-console.log('🚀 ~ server.js:37 ~ session  ==> ', session);
+console.log('🚀 ~ server.js:48 ~ session  ==> ', session);
 		
 		res.send(`Nombre de vues : ${req.session.views}`);
 		
 	} else {
 		req.session.views = 1;
-console.log('🚀 ~ server.js:37 ~ session  ==> ', session);
 		
 		res.send('Bienvenue, cette est votre première visite !');
-console.log('🚀 ~ server.js:37 ~ session  ==> ', session);
+console.log('🚀 ~ server.js:56 ~ session  ==> ', session,`typeof : `, typeof session);
 		
 	}
  });
