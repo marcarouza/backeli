@@ -1,4 +1,7 @@
-import transporterEli from "../config/NodeMailerConfig";
+// const nodemailer = require('nodemailer');
+
+const transporterEli =	require('../config/NodeMailerConfig')
+
 
 
 //##                ENVOIS DE MAIL pour FORMULAIRE CONTACT      ELI          -
