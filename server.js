@@ -66,78 +66,86 @@ app.use((req, res, next) => {
 	next();
 });
 
-app.use((req, res, next) => {
-	res.setHeader(
-		'Access-Control-Allow-Origin',
-		'https://elifront.onrender.com'
-	);
-	res.setHeader(
-		'Access-Control-Allow-Methods',
-		'GET, POST, OPTIONS, PUT, PATCH, DELETE'
-	);
-	res.setHeader(
-		'Access-Control-Allow-Headers',
-		'Content-Type, Authorization'
-	);
-	res.setHeader('Access-Control-Allow-Credentials', true);
-	next();
+
+//!! 
+
+// app.use((req, res, next) => {
+// 	res.setHeader(
+// 		'Access-Control-Allow-Origin',
+// 		'https://elifront.onrender.com'
+// 	);
+// 	res.setHeader(
+// 		'Access-Control-Allow-Methods',
+// 		'GET, POST, OPTIONS, PUT, PATCH, DELETE'
+// 	);
+// 	res.setHeader(
+// 		'Access-Control-Allow-Headers',
+// 		'Content-Type, Authorization'
+// 	);
+// 	res.setHeader('Access-Control-Allow-Credentials', true);
+// 	next();
+// });
+
+
+
+// app.use((req, res, next) => {
+// 	res.setHeader(
+// 		'Access-Control-Allow-Origin',
+// 		'https://test.eliazoura.fr'
+// 	);
+// 	res.setHeader(
+// 		'Access-Control-Allow-Methods',
+// 		'GET, POST, OPTIONS, PUT, PATCH, DELETE'
+// 	);
+// 	res.setHeader(
+// 		'Access-Control-Allow-Headers',
+// 		'Content-Type, Authorization'
+// 	);
+// 	res.setHeader('Access-Control-Allow-Credentials', true);
+// 	next();
+// });
+
+
+// app.use((req, res, next) => {
+// 	res.setHeader(
+// 		'Access-Control-Allow-Origin',
+// 		'https://back.eliazoura.fr'
+// 	);
+// 	res.setHeader(
+// 		'Access-Control-Allow-Methods',
+// 		'GET, POST, OPTIONS, PUT, PATCH, DELETE'
+// 	);
+// 	res.setHeader(
+// 		'Access-Control-Allow-Headers',
+// 		'Content-Type, Authorization'
+// 	);
+// 	res.setHeader('Access-Control-Allow-Credentials', true);
+// 	next();
+// });
+
+// app.use((req, res, next) => {
+// 	res.setHeader(
+// 		'Access-Control-Allow-Origin',
+// 		'https://front.eliazoura.fr'
+// 	);
+// 	res.setHeader(
+// 		'Access-Control-Allow-Methods',
+// 		'GET, POST, OPTIONS, PUT, PATCH, DELETE'
+// 	);
+// 	res.setHeader(
+// 		'Access-Control-Allow-Headers',
+// 		'Content-Type, Authorization'
+// 	);
+// 	res.setHeader('Access-Control-Allow-Credentials', true);
+// 	next();
+// });
+
+//!!
+
+// Pour toute autre route, renvoyer index.html
+app.get('*', (req, res) => {
+	res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
-
-
-
-app.use((req, res, next) => {
-	res.setHeader(
-		'Access-Control-Allow-Origin',
-		'https://test.eliazoura.fr'
-	);
-	res.setHeader(
-		'Access-Control-Allow-Methods',
-		'GET, POST, OPTIONS, PUT, PATCH, DELETE'
-	);
-	res.setHeader(
-		'Access-Control-Allow-Headers',
-		'Content-Type, Authorization'
-	);
-	res.setHeader('Access-Control-Allow-Credentials', true);
-	next();
-});
-
-
-app.use((req, res, next) => {
-	res.setHeader(
-		'Access-Control-Allow-Origin',
-		'https://back.eliazoura.fr'
-	);
-	res.setHeader(
-		'Access-Control-Allow-Methods',
-		'GET, POST, OPTIONS, PUT, PATCH, DELETE'
-	);
-	res.setHeader(
-		'Access-Control-Allow-Headers',
-		'Content-Type, Authorization'
-	);
-	res.setHeader('Access-Control-Allow-Credentials', true);
-	next();
-});
-
-app.use((req, res, next) => {
-	res.setHeader(
-		'Access-Control-Allow-Origin',
-		'https://front.eliazoura.fr'
-	);
-	res.setHeader(
-		'Access-Control-Allow-Methods',
-		'GET, POST, OPTIONS, PUT, PATCH, DELETE'
-	);
-	res.setHeader(
-		'Access-Control-Allow-Headers',
-		'Content-Type, Authorization'
-	);
-	res.setHeader('Access-Control-Allow-Credentials', true);
-	next();
-});
-
-
 
 // 5. Connexion à MongoDB
 const {uriMEMBRES} = require('./config/MongoConfig');
