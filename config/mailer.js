@@ -24,4 +24,4 @@ const goMail = (options, res) => {
 	});
 };
 
-module.exports = goMail;
+module.exports = transporterEli;

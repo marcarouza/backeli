@@ -1,3 +1,6 @@
+import transporterEli from "../config/NodeMailerConfig";
+
+
 //##                ENVOIS DE MAIL pour FORMULAIRE CONTACT      ELI          -
 
 module.exports.Post_MailContact = async (req, res) => {
@@ -31,11 +34,15 @@ module.exports.Post_MailContact = async (req, res) => {
 	try {
 		// Envoyer le premier email
 		await transporterEli.sendMail(mailAdminContact);
-		console.log('✅ from CONTACTPage => MAIL to ADMIN sent ! 187');
+		console.log(
+			'✅ from CONTACTPage => MAIL to ADMIN sent ! 37 from CONTROLLERS / Post_MailContact'
+		);
 
 		// Envoyer le deuxième email
 		await transporterEli.sendMail(mailUserContact);
-		console.log('✅ from CONTACTPage => MAIL to USER sent ! 192');
+		console.log(
+			'✅ from CONTACTPage => MAIL to USER sent ! from CONTROLLERS / Post_MailContact'
+		);
 
 		res.status(200).json({
 			message: '✅ ✅ from CONTACTPage => 2 Emails USER & ADMIN sent successfully',
