@@ -142,10 +142,6 @@ app.use((req, res, next) => {
 
 //!!
 
-// Pour toute autre route, renvoyer index.html
-app.get('*', (req, res) => {
-	res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-});
 
 // 5. Connexion à MongoDB
 const {uriMEMBRES} = require('./config/MongoConfig');
@@ -161,11 +157,6 @@ mongoose
 	)
 	.catch((error) => console.error('Erreur de connexion à la BDD :', error));
 
-// 6. Middleware global pour logger les en-têtes de chaque requête
-app.use((req, res, next) => {
-	console.log('❤️ En-têtes de la requête :', req.headers);
-	next();
-});
 
 // 7. Configuration et application du middleware CORS
 const allowedOrigins = [
@@ -259,11 +250,19 @@ console.log('🚀 ------------------------------------------------------🚀')
 app.use(express.static('public'));
 app.use(express.static(path.join(__dirname, 'dist')));
 
+
 // Routes fallback pour le front-end (SPA)
 app.get('/', (req, res) => {
 	res.sendFile(path.join(urlEntryPoint));
 });
 
+
+
+// Pour toute autre route, renvoyer index.html
+app.get('*', (req, res) => {
+	// res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+	res.sendFile(path.join(urlEntryPoint));
+});
 
 // 15. Démarrage du serveur
 const PORT = process.env.PORT || 3000;
