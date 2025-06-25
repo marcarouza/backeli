@@ -1,0 +1,49 @@
+2025/06/24 10:40:32 [emerg] 24675#0: bind() to 0.0.0.0:3000 failed (48: Address already in use)
+2025/06/24 10:40:32 [emerg] 24675#0: bind() to 0.0.0.0:3000 failed (48: Address already in use)
+2025/06/24 10:40:32 [emerg] 24675#0: bind() to 0.0.0.0:3000 failed (48: Address already in use)
+2025/06/24 10:40:32 [emerg] 24675#0: bind() to 0.0.0.0:3000 failed (48: Address already in use)
+2025/06/24 10:40:32 [emerg] 24675#0: bind() to 0.0.0.0:3000 failed (48: Address already in use)
+2025/06/24 10:40:32 [emerg] 24675#0: still could not bind()
+2025/06/24 10:40:56 [emerg] 24902#0: bind() to 0.0.0.0:3000 failed (48: Address already in use)
+2025/06/24 10:40:56 [emerg] 24902#0: bind() to 0.0.0.0:3000 failed (48: Address already in use)
+2025/06/24 10:40:56 [emerg] 24902#0: bind() to 0.0.0.0:3000 failed (48: Address already in use)
+2025/06/24 10:40:56 [emerg] 24902#0: bind() to 0.0.0.0:3000 failed (48: Address already in use)
+2025/06/24 10:40:56 [emerg] 24902#0: bind() to 0.0.0.0:3000 failed (48: Address already in use)
+2025/06/24 10:40:56 [emerg] 24902#0: still could not bind()
+2025/06/24 10:41:12 [emerg] 25087#0: bind() to 0.0.0.0:3000 failed (48: Address already in use)
+2025/06/24 10:41:12 [emerg] 25087#0: bind() to 0.0.0.0:3000 failed (48: Address already in use)
+2025/06/24 10:41:12 [emerg] 25087#0: bind() to 0.0.0.0:3000 failed (48: Address already in use)
+2025/06/24 10:41:12 [emerg] 25087#0: bind() to 0.0.0.0:3000 failed (48: Address already in use)
+2025/06/24 10:41:12 [emerg] 25087#0: bind() to 0.0.0.0:3000 failed (48: Address already in use)
+2025/06/24 10:41:12 [emerg] 25087#0: still could not bind()
+[ N 2025-06-25 11:01:41.9228 46664/T1 age/Wat/WatchdogMain.cpp:1365 ]: Starting Passenger watchdog...
+[ N 2025-06-25 11:01:41.9409 46666/T1 age/Cor/CoreMain.cpp:1283 ]: Starting Passenger core...
+[ N 2025-06-25 11:01:41.9411 46666/T1 age/Cor/CoreMain.cpp:244 ]: Passenger core running in multi-application mode.
+[ N 2025-06-25 11:01:41.9595 46666/T1 age/Cor/CoreMain.cpp:961 ]: Passenger core online, PID 46666
+[ N 2025-06-25 11:01:44.1207 46666/T6 age/Cor/SecurityUpdateChecker.h:518 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2025-06-25 11:03:09.9912 46666/T9 age/Cor/CoreMain.cpp:659 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2025-06-25 11:03:09.9913 46666/T1 age/Cor/CoreMain.cpp:1192 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2025-06-25 11:03:09.9914 46666/Tf Ser/Server.h:895 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2025-06-25 11:03:09.9914 46666/Tn Ser/Server.h:895 ]: [ServerThr.8] Freed 0 spare client objects
+[ N 2025-06-25 11:03:09.9915 46666/Td Ser/Server.h:895 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2025-06-25 11:03:09.9915 46666/Tj Ser/Server.h:895 ]: [ServerThr.6] Freed 0 spare client objects
+[ N 2025-06-25 11:03:09.9915 46666/Tf Ser/Server.h:552 ]: [ServerThr.4] Shutdown finished
+[ N 2025-06-25 11:03:09.9916 46666/Td Ser/Server.h:552 ]: [ServerThr.3] Shutdown finished
+[ N 2025-06-25 11:03:09.9915 46666/Th Ser/Server.h:895 ]: [ServerThr.5] Freed 0 spare client objects
+[ N 2025-06-25 11:03:09.9916 46666/Tn Ser/Server.h:552 ]: [ServerThr.8] Shutdown finished
+[ N 2025-06-25 11:03:09.9915 46666/Tr Ser/Server.h:895 ]: [ServerThr.10] Freed 0 spare client objects
+[ N 2025-06-25 11:03:09.9914 46666/T9 Ser/Server.h:895 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2025-06-25 11:03:09.9915 46666/Tp Ser/Server.h:895 ]: [ServerThr.9] Freed 0 spare client objects
+[ N 2025-06-25 11:03:09.9917 46666/T9 Ser/Server.h:552 ]: [ServerThr.1] Shutdown finished
+[ N 2025-06-25 11:03:09.9915 46666/Tb Ser/Server.h:895 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2025-06-25 11:03:09.9915 46666/Tl Ser/Server.h:895 ]: [ServerThr.7] Freed 0 spare client objects
+[ N 2025-06-25 11:03:09.9918 46666/Tp Ser/Server.h:552 ]: [ServerThr.9] Shutdown finished
+[ N 2025-06-25 11:03:09.9918 46666/Tb Ser/Server.h:552 ]: [ServerThr.2] Shutdown finished
+[ N 2025-06-25 11:03:09.9917 46666/Tr Ser/Server.h:552 ]: [ServerThr.10] Shutdown finished
+[ N 2025-06-25 11:03:09.9918 46666/Tt Ser/Server.h:895 ]: [ApiServer] Freed 0 spare client objects
+[ N 2025-06-25 11:03:09.9918 46666/Tl Ser/Server.h:552 ]: [ServerThr.7] Shutdown finished
+[ N 2025-06-25 11:03:09.9919 46666/Tt Ser/Server.h:552 ]: [ApiServer] Shutdown finished
+[ N 2025-06-25 11:03:09.9916 46666/Tj Ser/Server.h:552 ]: [ServerThr.6] Shutdown finished
+[ N 2025-06-25 11:03:09.9917 46666/Th Ser/Server.h:552 ]: [ServerThr.5] Shutdown finished
+[ N 2025-06-25 11:03:10.2092 46666/T1 age/Cor/CoreMain.cpp:1268 ]: Passenger core shutdown finished

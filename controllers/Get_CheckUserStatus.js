@@ -11,3 +11,4 @@ module.exports.Get_CheckUserStatus = (req, res) => {
 		user: res.locals.user,
 	});
 };
+

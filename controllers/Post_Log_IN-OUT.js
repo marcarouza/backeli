@@ -61,7 +61,7 @@ module.exports.Post_LogIN = async (req, res) => {
 
 		const token = createToken(user._id);
 		res.cookie('jwt', token, {
-			httpOnly: false, // Changé à true pour plus de sécurité
+			httpOnly: true, // Changé à true pour plus de sécurité
 			maxAge: 31 * 24 * 60 * 60 * 1000,
 			sameSite: 'None',
 			secure: true,

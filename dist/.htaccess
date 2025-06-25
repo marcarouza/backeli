@@ -3,8 +3,11 @@ PassengerAppRoot "/home/wzwa0352/eliazoura.fr"
 PassengerBaseURI "/"
 PassengerNodejs "/home/wzwa0352/nodevenv/eliazoura.fr/22/bin/node"
 PassengerAppType node
+PassengerAppEnv development
+PassengerFriendlyErrorPages on
 PassengerStartupFile server.js
 # DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
-PassengerAppEnv production
-PassengerFriendlyErrorPages on
-PassengerAppLogFile "/home/wzwa0352/eliazoura.fr/pass_log/logs.log"
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION BEGIN
+<IfModule Litespeed>
+</IfModule>
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION END

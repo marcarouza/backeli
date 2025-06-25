@@ -1,0 +1,57 @@
+[ N 2025-06-24 10:43:51.9478 25426/T1 age/Wat/WatchdogMain.cpp:1365 ]: Starting Passenger watchdog...
+[ N 2025-06-24 10:43:51.9612 25428/T1 age/Cor/CoreMain.cpp:1283 ]: Starting Passenger core...
+[ N 2025-06-24 10:43:51.9613 25428/T1 age/Cor/CoreMain.cpp:244 ]: Passenger core running in multi-application mode.
+[ N 2025-06-24 10:43:51.9751 25428/T1 age/Cor/CoreMain.cpp:961 ]: Passenger core online, PID 25428
+[ N 2025-06-24 10:43:54.1026 25428/T6 age/Cor/SecurityUpdateChecker.h:518 ]: Security update check: no update found (next check in 24 hours)
+App 25465 output: 🚀 ~ mongoConfig.js ~ uriMEMBRES  ==>  mongodb+srv://eli:eli@clustereli.1mm4wrw.mongodb.net/membres?retryWrites=true&w=majority&appName=ClusterEli
+App 25465 output: 🚀 ~ mongoConfig.js ~ clusterName  ==>  CLUSTERELI
+App 25465 output: ✅ Serveur démarré sur : http://localhost:3500
+App 25465 output: 2025-06-24 10:43:54 [[32MINFO[39M]: Server running on port 3500
+App 25465 output: 2025-06-24 10:43:54 [[32MINFO[39M]: Node.js version: v22.16.0
+App 25465 output: ❤️ En-têtes de la requête : {
+App 25465 output:   connection: 'close',
+App 25465 output:   'user-agent': 'Passenger Prespawn Script',
+App 25465 output:   host: '0.0.0.0',
+App 25465 output:   'x-forwarded-for': '127.0.0.1',
+App 25465 output:   '!~passenger-client-address': '127.0.0.1'
+App 25465 output: }
+App 25465 output: BDD connectée: MEMBRES
+App 25465 output: [0;36mMongoose:[0m lambdas.createIndex({ pseudo: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
+App 25465 output: [0;36mMongoose:[0m lambdas.createIndex({ email: [33m1[39m }, { unique: [33mtrue[39m, background: [33mtrue[39m })
+App 25465 output: Le transporteur Nodemailer est prêt à envoyer les emails.
+[ W 2025-06-24 16:19:15.0087 25428/T4 age/Cor/App/Poo/AnalyticsCollection.cpp:105 ]: Process (pid=25465, group=/Users/eliazoura/Documents/CODE_2025/SERVEURS/eliback.fr (development)) no longer exists! Detaching it from the pool.
+[ N 2025-06-24 16:19:15.0111 25428/T4 age/Cor/CoreMain.cpp:1093 ]: Checking whether to disconnect long-running connections for process 25465, application /Users/eliazoura/Documents/CODE_2025/SERVEURS/eliback.fr (development)
+[ E 2025-06-24 16:19:15.0419 25428/T12 age/Cor/App/Implementation.cpp:218 ]: Could not spawn process for application /Users/eliazoura/Documents/CODE_2025/SERVEURS/eliback.fr: An internal error occurred while preparing to spawn an application process: Cannot get user database entry for user UID 501; it looks like your system's user database is broken, please fix it.
+  Error ID: 13163282
+  Error details saved to: /var/folders/zh/zwg6dxdx54q86w3ygfy4s68m0000gn/T//passenger-error-TcPo0Q.html
+
+
+[ N 2025-06-24 16:19:18.6286 25428/T9 age/Cor/CoreMain.cpp:659 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2025-06-24 16:19:18.6302 25428/T1 age/Cor/CoreMain.cpp:1192 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2025-06-24 16:19:18.6312 25428/T9 Ser/Server.h:895 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2025-06-24 16:19:18.6317 25428/Tr Ser/Server.h:895 ]: [ServerThr.10] Freed 0 spare client objects
+[ N 2025-06-24 16:19:18.6322 25428/T9 Ser/Server.h:552 ]: [ServerThr.1] Shutdown finished
+[ N 2025-06-24 16:19:18.6312 25428/Tb Ser/Server.h:895 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2025-06-24 16:19:18.6315 25428/Tn Ser/Server.h:895 ]: [ServerThr.8] Freed 0 spare client objects
+[ N 2025-06-24 16:19:18.6316 25428/Tp Ser/Server.h:895 ]: [ServerThr.9] Freed 0 spare client objects
+[ N 2025-06-24 16:19:18.6313 25428/Td Ser/Server.h:895 ]: [ServerThr.3] Freed 0 spare client objects
+[ N 2025-06-24 16:19:18.6314 25428/Tf Ser/Server.h:895 ]: [ServerThr.4] Freed 0 spare client objects
+[ N 2025-06-24 16:19:18.6315 25428/Tl Ser/Server.h:895 ]: [ServerThr.7] Freed 0 spare client objects
+[ N 2025-06-24 16:19:18.6315 25428/Th Ser/Server.h:895 ]: [ServerThr.5] Freed 0 spare client objects
+[ N 2025-06-24 16:19:18.6315 25428/Tj Ser/Server.h:895 ]: [ServerThr.6] Freed 0 spare client objects
+[ N 2025-06-24 16:19:18.6327 25428/Tt Ser/Server.h:895 ]: [ApiServer] Freed 0 spare client objects
+[ N 2025-06-24 16:19:18.6392 25428/Tr Ser/Server.h:552 ]: [ServerThr.10] Shutdown finished
+[ N 2025-06-24 16:19:18.6398 25428/Tn Ser/Server.h:552 ]: [ServerThr.8] Shutdown finished
+[ N 2025-06-24 16:19:18.6398 25428/Tp Ser/Server.h:552 ]: [ServerThr.9] Shutdown finished
+[ N 2025-06-24 16:19:18.6405 25428/Tt Ser/Server.h:552 ]: [ApiServer] Shutdown finished
+[ N 2025-06-24 16:19:18.6400 25428/Th Ser/Server.h:552 ]: [ServerThr.5] Shutdown finished
+[ N 2025-06-24 16:19:18.6399 25428/Tl Ser/Server.h:552 ]: [ServerThr.7] Shutdown finished
+[ N 2025-06-24 16:19:18.6402 25428/Tj Ser/Server.h:552 ]: [ServerThr.6] Shutdown finished
+[ N 2025-06-24 16:19:18.6399 25428/Tb Ser/Server.h:552 ]: [ServerThr.2] Shutdown finished
+[ N 2025-06-24 16:19:18.6399 25428/Td Ser/Server.h:552 ]: [ServerThr.3] Shutdown finished
+[ N 2025-06-24 16:19:18.6399 25428/Tf Ser/Server.h:552 ]: [ServerThr.4] Shutdown finished
+
+[ N 2025-06-24 16:19:18.6520 25428/T9 age/Cor/CoreMain.cpp:659 ]: Signal received. Gracefully shutting down... (send signal 1 more time(s) to force shutdown)
+[ E 2025-06-24 16:19:18.6570 25428/T1 age/Cor/TelemetryCollector.h:455 ]: Error contacting anonymous telemetry server: Could not resolve host: anontelemetry.phusionpassenger.com
+[ N 2025-06-24 16:19:18.7953 25428/T1 age/Cor/CoreMain.cpp:1268 ]: Passenger core shutdown finished
+[ W 2025-06-24 16:19:18.8562 92939/T1 age/Wat/WatchdogMain.cpp:428 ]: Cannot open cleanup PID file temp_dir_toucher.pid (/var/folders/zh/zwg6dxdx54q86w3ygfy4s68m0000gn/T/passenger-standalone.gvb4dp/temp_dir_toucher.pid)
