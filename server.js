@@ -26,8 +26,11 @@ app.use(
 	cors({
 		origin(origin, cb) {
 			if (!origin) return cb(null, true);
+
+			// On autorise eliazoura.fr, localhost, tous les sous-domaines de render.com et onrender.com
 			const pattern =
-				/^https?:\/\/(www\.)?(eliazoura\.fr|localhost)(?::\d+)?$/;
+				/^https?:\/\/(?:www\.)?(eliazoura\.fr|localhost|[\w-]+\.(?:render|onrender)\.com)(?::\d+)?$/;
+
 			pattern.test(origin)
 				? cb(null, true)
 				: cb(new Error(`Origin ${origin} non autorisée`));
@@ -36,6 +39,7 @@ app.use(
 		credentials: true,
 	})
 );
+ 
 
 // 6. Parser JSON, urlencoded, cookies, user-agent
 app.use(bodyParser.json());
