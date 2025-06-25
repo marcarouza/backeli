@@ -25,17 +25,28 @@ module.exports.Post_LogOUT= async (req, res) => {
 				`🟢 Utilisateur ${oneUser.pseudo.toUpperCase()} mis à jour : inactif`
 			);
 
-			res.cookie('jwt', '', {
-				httpOnly: false, // Changé à true pour plus de sécurité
-				maxAge: 1,
-				sameSite: 'None',
+			// res.cookie('jwt', '', {
+			// 	httpOnly: false, // Changé à true pour plus de sécurité
+			// 	maxAge: 1,
+			// 	sameSite: 'None',
+			// 	secure: true,
+			// 	path: '/',
+			// });
+
+			// 1) Supprime le cookie JWT côté client
+			res.clearCookie('jwt', {
+				httpOnly: true, // même configuration que pour l’émission
 				secure: true,
+				sameSite: 'None',
+
 				path: '/',
 			});
 
-			res.status(200).json({
-				message: '✅ FROM SERVER => Déconnecté avec succès : en DataBase et côté CLIENT',
-			});
+			// 2) Envoie une réponse JSON
+			return res
+				.status(200)
+				.json({success: true, message: '✅ FROM SERVER => Déconnecté avec succès : en DataBase et côté CLIENT'});
+
 		} else {
 			return res.status(404).json({message: 'Utilisateur non trouvé'});
 		}
@@ -71,7 +82,8 @@ module.exports.Post_LogIN = async (req, res) => {
 		res.setHeader('Authorization', `Bearer ${token}`);
 
 		// Si la connexion réussit, envoyer une réponse positive
-		res.status(200).json({success: true, user});
+		
+		return res.status(200).json({success: true, user});
 	} catch (err) {
 
 

@@ -1,127 +1,112 @@
-// 1. Chargement des variables d'environnement
+// src/server.js
+
+// 1. Charger les variables d’environnement
 require('dotenv').config();
 
-// 2. Importations et configuration du back office
-// const {setupApp} = require('./config/backoffice.js/app');
-// const {logger} = require('./config/backoffice.js/logger');
-
-// 3. Importations des modules tiers
+// 2. Importer les dépendances
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
 const useragent = require('express-useragent');
 const path = require('path');
-// const listEndpoints = require('express-list-endpoints');
-// const session = require('express-session');
+const history = require('connect-history-api-fallback');
 
+// 3. Importer middlewares et routes
 const checkLoggedUser = require('./middlewares/authMiddle');
 const routes = require('./controllers/routesControl');
 
+// 4. Créer l’app Express
 const app = express();
 
-// 4. Configuration du middleware CORS
-const corsOptions = {
-	origin: '*', // Autorise toutes les origines. Adaptez si nécessaire.
-	methods: ['GET', 'POST'],
-	credentials: true,
-	optionsSuccessStatus: 200,
-};
-app.use(cors(corsOptions));
+// 5. CORS (autorise ton domaine + localhost + Postman/Curl)
+app.use(
+	cors({
+		origin(origin, cb) {
+			if (!origin) return cb(null, true);
+			const pattern =
+				/^https?:\/\/(www\.)?(eliazoura\.fr|localhost)(?::\d+)?$/;
+			pattern.test(origin)
+				? cb(null, true)
+				: cb(new Error(`Origin ${origin} non autorisée`));
+		},
+		methods: ['GET', 'POST'],
+		credentials: true,
+	})
+);
 
-// 5. Configuration des parsers (corps des requêtes, cookies, détection du User-Agent)
+// 6. Parser JSON, urlencoded, cookies, user-agent
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
 app.use(useragent.express());
 
-// 6. Configuration de express-session
-// app.use(
-// 	session({
-// 		secret: process.env.JET,
-// 		resave: false,
-// 		saveUninitialized: false,
-// 		cookie: {
-// 			maxAge: 1000 * 60 * 60 * 24, // 24 heures
-// 			secure: process.env.NODE_ENV === 'production', // HTTPS en production
-// 			httpOnly: true,
-// 		},
-// 	})
-// );
+// 7. Gestion de session (si tu l’utilises)
+app.use(
+	session({
+		secret: process.env.JET,
+		resave: false,
+		saveUninitialized: false,
+		cookie: {
+			maxAge: 24 * 60 * 60 * 1000,
+			secure: process.env.NODE_ENV === 'production',
+			httpOnly: true,
+		},
+	})
+);
 
-// 7. Route d'exemple pour l'utilisation de la session
-app.get('/api/session', (req, res) => {
-	if (req.session.views) {
-		req.session.views++;
-		console.log('🚀 ~ session ==> ', req.session.views);
-		res.send(`Nombre de vues : ${req.session.views}`);
-	} else {
-		req.session.views = 1;
-		console.log('🚀 ~ session ==> Première visite');
-		res.send("Bienvenue, c'est votre première visite !");
-	}
-});
-
-// 8. Middleware de log des en-têtes de la requête (pour debug)
+// 8. Debug : log des headers de chaque requête
 app.use((req, res, next) => {
-	console.log('❤️ En-têtes de la requête :', req.headers);
+	console.log('>> Headers:', req.headers);
 	next();
 });
 
 // 9. Connexion à MongoDB
 const {uriMEMBRES} = require('./config/MongoConfig');
-mongoose.set('debug', true);
 mongoose
 	.connect(uriMEMBRES)
-	.then(() =>
-		console.log(
-			`BDD connectée: ${mongoose.connection.name.toUpperCase()}`
-		)
-	)
-	.catch((error) => console.error('Erreur de connexion à la BDD :', error));
+	.then(() => console.log('✅ MongoDB connecté:', mongoose.connection.name))
+	.catch((err) => console.error('❌ Erreur BDD :', err));
 
-// 10. Application des configurations globales personnalisées
-// setupApp(app); // Décommentez si nécessaire
-
-// 11. Middleware d'authentification global
+// 10. Authentification globale (protège les routes suivantes)
 app.use(checkLoggedUser);
 
-// 12. Configuration des fichiers statiques
-// Attention : si vous souhaitez que ces fichiers soient accessibles sans authentification,
-// placez ces middlewares AVANT le middleware checkLoggedUser.
+// 11. Routes API
+app.use('/api', routes);
+
+// 12. History-fallback pour le mode history de Vue Router
+//    => toute URL non /api/* renvoie index.html
+app.use(
+	history({
+		index: '/index.html',
+		verbose: true,
+	})
+);
+
+// 13. Fichiers statiques (public et build Vue)
 app.use(express.static('public'));
 app.use(express.static(path.join(__dirname, 'dist')));
 
-// 13. Chargement des routes principales
-app.use('/', routes);
-
-// 14. Gérer les routes pour la SPA
-const urlEntryPoint = path.join(__dirname, 'dist', 'index.html');
-app.get('/', (req, res) => {
-	res.sendFile(urlEntryPoint);
-});
+// 14. Catch-all (renvoi index.html si jamais history ne l’a pas fait)
 app.get('*', (req, res) => {
-	res.sendFile(urlEntryPoint);
+	res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
-// 15. Middleware global de gestion des erreurs (DOIT être le dernier middleware)
-// app.use((err, req, res, next) => {
-// 	logger.error(`Error: ${err.message}`);
-// 	logger.error(err.stack);
-// 	const statusCode = err.statusCode || 500;
-// 	res.status(statusCode).json({
-// 		success: false,
-// 		error: err.message || 'Server Error',
-// 		...(process.env.NODE_ENV === 'development' && {stack: err.stack}),
-// 	});
-// });
+// 15. Gestionnaire d’erreurs (dernier middleware)
+/*
+app.use((err, req, res, next) => {
+  console.error('💥 Erreur globale :', err)
+  res.status(err.statusCode || 500).json({
+    success: false,
+    message: err.message
+  })
+})
+*/
 
 // 16. Démarrage du serveur
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-	const serverUrl = `http://localhost:${PORT}`;
-	console.log(`✅ Serveur démarré sur : ${serverUrl}`);
-	// logger.info(`Server running on port ${PORT}`);
-	// logger.info(`Node.js version: ${process.version}`);
-});
+app.listen(PORT, () =>
+	console.log(`🚀 Serveur démarré sur http://localhost:${PORT}`)
+);
