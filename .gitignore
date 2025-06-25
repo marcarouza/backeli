@@ -9,3 +9,4 @@ npm-debug.log*
 !/ssl/.gitkeep
 
 # En  développement, gardez les certificats locaux dans le projet.En production, les certificats doivent être gérés de manière plus sécurisée, souvent en dehors de l'arborescence du projet.
+.env
