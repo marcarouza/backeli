@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const maxAge = 3600000; // 1 heure pour la durée de vie du token
 
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 const jwt = require('jsonwebtoken');
 const nodemailer = require('nodemailer');
@@ -15,7 +15,7 @@ const createToken = (id) => {
 
 const {createDB, countDoc, findExistUser} = require('../actionDB');
 
-const transporterEli = nodemailer.createTransport({
+const transporterEli = nodemailer.createTransporter({
 	host: 'eliazoura.fr',
 	port: 587,
 	secure: false,
@@ -24,7 +24,7 @@ const transporterEli = nodemailer.createTransport({
 		pass: 'YachaR#398@',
 	},
 });
-const transporterChant = nodemailer.createTransport({
+const transporterChant = nodemailer.createTransporter({
 	host: 'celine-azoura.fr',
 	port: 587,
 	secure: false,
